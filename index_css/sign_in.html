@@ -8,57 +8,70 @@
 </head>
 <body>
 
-    <header>
+    <header class="header">
+      
+      <div class="container">
 
-      <div class="header_one">
-
-        <div class="logo-container">
-          <p>CDLB2025</p>
+        <div class="logo">
+          <a href="#">LOGO.</a>
         </div>
 
-        <div class="nav_container">
+        <nav class="menu">
 
-          <nav class="nav-nav">
-            <a href="#main">Inicio</a>
-            <div class="dropdown">
-              <a href="#products" class="dropbtn">Productos</a>
-              <div class="dropdown-content">
-                <a href="#product1">Todos</a>
-                <a href="#product2">Combos</a>
-                <a href="#product3">Empanadas</a>
-                <a href="#product4">Pastelitos</a>
-                <a href="#product5">Bebidas Frías</a>
-                <a href="#product6">Extras</a>
-              </div>
+          <div class="head">
+
+            <div>
+              <a href="#" class="logo">LOGO.</a>
             </div>
-            <a href="#contact">Contacto</a>
-          </nav>
-
-        </div>
-
-      </div>
-
-      <div class="header_two">
-
-          <div class="nav_container">
-
-            <nav class="nav-nav">
-              <a href="#search">
-                <ion-icon name="search"></ion-icon>
-              </a>
-              <a href="#cart">
-                <ion-icon name="cart"></ion-icon>
-              </a>
-              <a href="#signIn">
-                <ion-icon name="person"></ion-icon>
-              </a>
-            </nav>
+            <button type="button" class="close-menu-btn"></button>
 
           </div>
 
+          <ul>
+            <li><a href="#">Inicio</a></li>
+
+            <li class="dropdown">
+              <a href="#">Productos</a>
+              <ion-icon class="ion-icon" name="chevron-down"></ion-icon>
+              <ul class="sub-menu">
+                <li><a href="#"><span>Todo</span></a></li>
+                <li><a href="#"><span>Empanadas</span></a></li>
+                <li><a href="#"><span>Pastelitos</span></a></li>
+                <li><a href="#"><span>Especiales</span></a></li>
+                <li><a href="#"><span>Bebidas Frías</span></a></li>
+                <li><a href="#"><span>Bollitos</span></a></li>
+                <li><a href="#"><span>Hallacas</span></a></li>
+              </ul>
+            </li>
+
+            <li><a href="#">Contactos</a></li>
+          </ul>
+
+        </nav>
+
+        <div class="header-right">
+
+          <button type="button" class="cart-btn icon-btn">
+            <ion-icon name="cart"></ion-icon>
+          </button>
+
+          <button type="button" class="person-btn icon-btn">
+            <ion-icon name="person"></ion-icon>
+          </button>
+
+          <button type="button" class="open-menu-btn">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+          </button>
+          
+        </div>
+        
       </div>
 
     </header>
+
+    <section class="hero"></section>
 
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
