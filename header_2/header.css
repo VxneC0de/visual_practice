@@ -11,6 +11,7 @@ nav{
   width: 100%;
   background: #242526;
 }
+
 nav .wrapper{
   position: relative;
   max-width: 1300px;
@@ -22,6 +23,7 @@ nav .wrapper{
   align-items: center;
   justify-content: space-between;
 }
+
 .wrapper .logo a{
   color: #f2f2f2;
   font-size: 30px;
@@ -30,6 +32,7 @@ nav .wrapper{
 }
 .wrapper .nav-links{
   display: inline-flex;
+  gap: 5px;
 }
 .nav-links li{
   list-style: none;
@@ -44,7 +47,7 @@ nav .wrapper{
   transition: all 0.3s ease;
 }
 .nav-links li a:hover{
-  background: #3A3B3C;
+  background: #CEDF9F;
 }
 .nav-links .mobile-item{
   display: none;
@@ -53,7 +56,7 @@ nav .wrapper{
   position: absolute;
   background: #242526;
   width: 100%;
-  line-height: 45px;
+  line-height: 80px;
   top: 85px;
   opacity: 0;
   visibility: hidden;
@@ -79,6 +82,27 @@ nav .wrapper{
   text-align: center; /* Opcional: para centrar el texto */
 }
 
+.header-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  gap: 30px; /* Espacio entre los iconos */
+}
+
+.header-right a {
+  color: #f2f2f2; /* Color blanco para los iconos */
+  font-size: 24px; /* Tamaño más grande para los iconos */
+  text-decoration: none; /* Quitar subrayado */
+  list-style: none; /* Quitar estilo de lista */
+  transition: all 0.3s ease;
+}
+
+.header-right a:hover {
+  color: #CEDF9F;
+}
 
 .wrapper .btn{
   color: #fff;
@@ -93,6 +117,17 @@ nav .wrapper{
 }
 
 @media screen and (max-width: 970px) {
+
+  .wrapper {
+    justify-content: space-between;
+  }
+
+  .header-right {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
   .wrapper .btn{
     display: block;
   }
@@ -109,8 +144,11 @@ nav .wrapper{
     line-height: 50px;
     overflow-y: auto;
     box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+    gap: 0px;
     transition: all 0.3s ease;
+    z-index: 999;
   }
+  
   /* custom scroll bar */
   ::-webkit-scrollbar {
     width: 10px;
@@ -145,6 +183,7 @@ nav .wrapper{
     visibility: visible;
     padding-left: 20px;
     width: 100%;
+    line-height: 45px;
     max-height: 0px;
     overflow: hidden;
     box-shadow: none;
