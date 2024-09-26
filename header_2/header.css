@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 nav{
   position: fixed;
   z-index: 99;
@@ -30,13 +32,18 @@ nav .wrapper{
   font-weight: 600;
   text-decoration: none;
 }
+
 .wrapper .nav-links{
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
   gap: 5px;
 }
+
 .nav-links li{
   list-style: none;
 }
+
 .nav-links li a{
   color: #f2f2f2;
   text-decoration: none;
@@ -46,12 +53,15 @@ nav .wrapper{
   border-radius: 5px;
   transition: all 0.3s ease;
 }
+
 .nav-links li a:hover{
   background: #CEDF9F;
 }
+
 .nav-links .mobile-item{
   display: none;
 }
+
 .nav-links .drop-menu{
   position: absolute;
   background: #242526;
@@ -74,6 +84,7 @@ nav .wrapper{
   opacity: 1;
   visibility: visible;
 }
+
 .drop-menu li a{
   display: block;
   padding: 0 15px;
@@ -86,9 +97,6 @@ nav .wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  right: 50%;
-  transform: translateX(50%);
   gap: 30px; /* Espacio entre los iconos */
 }
 
@@ -110,6 +118,7 @@ nav .wrapper{
   cursor: pointer;
   display: none;
 }
+
 .wrapper .btn.close-btn{
   position: absolute;
   right: 30px;
