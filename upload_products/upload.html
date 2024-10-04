@@ -54,7 +54,7 @@
         
         </nav>
 
-        <div class="form-box">
+        <form action="#" class="form-box">
     
             <div class="register-container" id="register">
     
@@ -70,24 +70,36 @@
                     </div>
                     
                     <div class="input-box">
-                        <input type="text" class="input-field" placeholder="Precio">
+                        <select class="input-field">
+                            <option value="" disabled selected>Elegir una Categoría</option>
+                            <option value="categoria1">Empanadas</option>
+                            <option value="categoria2">Pastelitos</option>
+                            <option value="categoria3">Especiales</option>
+                            <option value="categoria4">Bebidas Frías</option>
+                            <option value="categoria5">Otros</option>
+                        </select>
                         <i class='bx bx-money-withdraw iconoOne'></i>
-
                     </div>
+                    
                 </div>
     
                 <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Correo Electrónico">
-                    <i class="bx bx-envelope iconoOne"></i>
+                    <input type="text" class="input-field" placeholder="Precio">
+                    <i class='bx bx-money-withdraw iconoOne'></i>
                 </div>
                 
                 <div class="input-box">
-                    <input type="password" class="input-field" placeholder="Contraseña">
+                    <input type="date" class="input-field" placeholder="Fecha">
                     <i class="bx bx-lock-alt iconoOne"></i>
                 </div>
     
                 <div class="input-box">
-                    <input type="password" class="input-field" placeholder="Confirmar  Contraseña">
+                    <input type="time" class="input-field" placeholder="Hora">
+                    <i class="bx bx-lock-alt iconoOne"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="file" class="input-field" placeholder="Hora">
                     <i class="bx bx-lock-alt iconoOne"></i>
                 </div>
 
@@ -101,7 +113,7 @@
                 </div>
     
             </div>
-        </div>
+        </form>
 
     </div>
 
