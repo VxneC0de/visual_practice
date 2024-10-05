@@ -10,11 +10,20 @@
 
 body{
   background-color: #CEDF9F;
-    /*background: url("images/1.jpg");*/
-    /*background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;*/
-    overflow: hidden;
+  /*background: url("images/1.jpg");*/
+  /*background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;*/
+  overflow: hidden;
+
+    /*width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;*/
 }
 
 section{
@@ -277,13 +286,6 @@ nav .wrapper_nav{
 
 /*================================ FORM ================================ */
 
-.product_display{
-
-}
-
-.product_display_table{
-
-}
 
 .top span{
     color: #fff;
@@ -304,4 +306,46 @@ header{
   font-size: 30px;
   text-align: center;
   padding: 10px 0 30px 0;
+}
+
+
+.product_display{
+  margin:2rem 0;
+}
+
+.product_display_table{
+
+}
+
+.product_display .product_display_table{
+  width: 100%;
+  text-align: center;
+}
+
+.product_display .product_display_table thead{
+  background: var(--bg-color);
+}
+
+.product_display .product_display_table th{
+  padding:1rem;
+  font-size: 2rem;
+}
+
+
+.product_display .product_display_table td{
+  padding:1rem;
+  font-size: 2rem;
+  border-bottom: var(--border);
+}
+
+.product_display .product_display_table .btn:first-child{
+  margin-top: 0;
+}
+
+.product_display .product_display_table .btn:last-child{
+  background: crimson;
+}
+
+.product_display .product_display_table .btn:last-child:hover{
+  background: var(--black);
 }
