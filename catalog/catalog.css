@@ -17,13 +17,28 @@ body{
     overflow: hidden;
 }
 
-.wrapper{
+section{
+  min-height: 100vh;
+}
+
+.container_catalog{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(39, 39, 39, 0.4);
+}
+
+/*.wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 110vh;
+    min-height: 100vh;
     background: rgba(39, 39, 39, 0.4);
-}
+}*/
+
+/*================================ NAV ================================ */
 
 nav{
     position: fixed;
@@ -32,9 +47,9 @@ nav{
     z-index: 99;
     width: 100%;
     background: #242526;
-  }
+}
   
-  nav .wrapper_nav{
+nav .wrapper_nav{
     position: relative;
     max-width: 1300px;
     padding: 0px 30px;
@@ -44,27 +59,27 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
+}
   
-  .wrapper_nav .logo a{
+.wrapper_nav .logo a{
     color: #f2f2f2;
     font-size: 30px;
     font-weight: 600;
     text-decoration: none;
-  }
+}
   
-  .wrapper_nav .nav-links{
+.wrapper_nav .nav-links{
     display: flex;
     justify-content: center;
     flex-grow: 1;
     gap: 5px;
-  }
+}
   
-  .nav-links li{
+.nav-links li{
     list-style: none;
-  }
+}
   
-  .nav-links li a{
+.nav-links li a{
     color: #f2f2f2;
     text-decoration: none;
     font-size: 18px;
@@ -74,11 +89,11 @@ nav{
     transition: all 0.3s ease;
   }
   
-  .nav-links li a:hover{
+.nav-links li a:hover{
     background: #CEDF9F;
-  }
+}
   
-  .nav-links .mobile-item{
+.nav-links .mobile-item{
     display: none;
   }
   
@@ -258,3 +273,35 @@ nav{
   nav input{
     display: none;
   }
+
+
+/*================================ FORM ================================ */
+
+.product_display{
+
+}
+
+.product_display_table{
+
+}
+
+.top span{
+    color: #fff;
+    font-size: small;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.top span a{
+    font-weight: 500;
+    color: #fff;
+    margin-left: 5px;
+}
+
+header{
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px 0 30px 0;
+}
