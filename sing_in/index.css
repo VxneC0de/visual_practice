@@ -1,0 +1,47 @@
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@import "./nav.css";
+@import "./main.css";
+@import "./form.css";
+@import "./footer.css";
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --gris: #F2EED7;
+    --claro: #C0EBA6;
+    --medio: #347928;
+    --oscuro: #626F47;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    background-color: var(--medio);
+    overflow: hidden;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+

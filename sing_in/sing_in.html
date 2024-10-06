@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./sing_in.css">
+    <link rel="stylesheet" href="./index.css">
     <title>Ludiflex | Login & Registration</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
@@ -57,7 +57,7 @@
     </div>
     </nav>
 
-    <div class="form-box">
+    <form action="#" class="form-box">
 
         <div class="login-container" id="login">
             <div class="top">
@@ -129,24 +129,25 @@
             </div>
 
         </div>
-    </div>
+    </form>
+
+    <footer class="footer">
+        
+        <div class="footer-box">
+            
+            <div class="footer-text">
+                <p>&copy; 2024 El Cóctel de los Batidos 2025</p>
+            </div>
+            
+            <div class="footer-iconTop">
+                <a href="#"><span>By VxneC0de | All Rights Reserved.</span></a>
+            </div>
+          
+        </div>
+  
+    </footer>
 
 </div>   
-
-
-<script>
-   
-   function myMenuFunction() {
-    var i = document.getElementById("navMenu");
-
-    if(i.className === "nav-menu") {
-        i.className += " responsive";
-    } else {
-        i.className = "nav-menu";
-    }
-   }
- 
-</script>
 
 <script>
 
@@ -158,8 +159,6 @@
     function login() {
         x.style.left = "4px";
         y.style.right = "-520px";
-        a.className += " white-btn";
-        b.className = "btn";
         x.style.opacity = 1;
         y.style.opacity = 0;
     }
@@ -167,8 +166,6 @@
     function register() {
         x.style.left = "-510px";
         y.style.right = "5px";
-        a.className = "btn";
-        b.className += " white-btn";
         x.style.opacity = 0;
         y.style.opacity = 1;
     }
