@@ -1,0 +1,18 @@
+.error {
+    color: #d4153c;
+    font-weight: 600;
+    font-size: 14.5px;
+    padding-top: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box2 .error {
+    position: absolute;
+    bottom: -20px;
+    color: #d4153c;
+    font-weight: 600;
+    font-size: 14.5px;
+    margin-top: 12px;
+}
+
