@@ -4,8 +4,9 @@
   top: 0;
   height: 100vh;
   width: 100%;
-  max-width: 350px;
-  background: #242526;
+  max-width: 420px;
+  background: #347928;
+  box-shadow: 0px 2px 5px #242526;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,60 +40,93 @@
   padding: 0;
   width: 100%;
   overflow-y: auto; /* Permite el scroll si la lista es larga */
+  flex: 1;
+}
+
+.cart_items {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  overflow-y: auto; /* Permite el scroll si la lista es larga */
+  flex: 1;
 }
 
 .cart_item {
-  background: #3A3B3C;
-  color: #fff;
+  background: #ffffff;
+  box-shadow: 0px 2px 5px #24252694;
+  color: #242526;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
   display: flex;
   align-items: center;
+  width: 100%;
+  min-height: 60px; /* Reducido para hacer el contenedor más horizontal */
+  position: relative;
+  font-size: 15px;
 }
 
 .cart_item .remove_item {
-  margin-right: 10px;
-}
-
-.cart_item .remove_item span {
-  color: #ff4d4d;
-  font-size: 24px;
+  width: 30px;
+  height: 30px;
+  background: #C0EBA6;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 
-.cart_item .item_img img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-right: 10px;
+.cart_item .remove_item span {
+  color: #242526;
+  font-size: 20px;
+  user-select: none;
+  display: flex;
+    align-items: center;
 }
 
 .cart_item .item_details {
   flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .cart_item .item_details p {
   margin: 0;
+  font-weight: 500;
 }
 
-.cart_item .item_details .qty {
+.cart_item .item_details strong {
+  display: block; /* Asegura que el precio esté en una nueva línea */
+}
+
+.cart_item .qty {
   display: flex;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 0; /* Eliminado el margen superior */
 }
 
-.cart_item .item_details .qty span {
-  background: #5a5b5c;
-  padding: 5px 10px;
+.cart_item .qty span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: #C0EBA6;
+  padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: 600;
 }
 
-.cart_item .item_details .qty strong {
+.cart_item .qty strong {
   margin: 0 10px;
 }
+
+
 
 /* Estilos para las acciones del carrito */
 .cart_actions {
@@ -104,25 +138,37 @@
 .cart_actions .subtotal {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background: #ffffff;
+  box-shadow: 0px 2px 5px #24252694;
+  color: #242526;
   margin-bottom: 10px;
   padding: 0 20px;
-  color: #fff;
+  color: #242526;
+}
+
+.cart_actions .subtotal p{
+  font-weight: 500;
 }
 
 .cart_actions .clean_btn, .cart_actions .checkout_btn {
   width: 90%;
-  background: #CEDF9F;
+  background: #C0EBA6;
+  border: 5px #242526 solid;
   color: #242526;
+  font-weight: 600;
   border: none;
   padding: 10px;
   cursor: pointer;
   margin: 5px 0;
   border-radius: 5px;
-  transition: background 0.3s ease;
+  transition: .2s ease;
 }
 
 .cart_actions .clean_btn:hover, .cart_actions .checkout_btn:hover {
-  background: #B8D38F;
+  background: #ffffff;
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* Custom scroll bar */
@@ -152,64 +198,3 @@
       right: 20px;
     }
   }
-  
-
-/*
-.cart_item {
-  background: #3A3B3C;
-  color: #fff;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  position: relative; //Añadido 
-}
-
-.cart_item .remove_item {
-  position: absolute; //añadido
-  top: 10px; //añadido
-  left: 10px; //añadido
-  margin-right: 10px; //quitado
-}
-
-.cart_item .remove_item span {
-  color: #ff4d4d;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.cart_item .item_img img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-
-.cart_item .item_details {
-  flex: 1;
-  padding-left: 30px; //Añadido para darle espacio a la papelera 
-}
-
-.cart_item .item_details p {
-  margin: 0;
-}
-
-.cart_item .item_details .qty {
-  display: flex;
-  align-items: center;
-  margin-top: 5px;
-}
-
-.cart_item .item_details .qty span {
-  background: #5a5b5c;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.cart_item .item_details .qty strong {
-  margin: 0 10px;
-}
-  /*
