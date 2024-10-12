@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./catalog.css">
+    <link rel="stylesheet" href="./header.css">
     <title>Sing In</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
@@ -58,49 +58,7 @@
 
         <section class="content">
 
-            <div class="table">
-
-                <div class="table_header">
-
-                    <p>Detalles del Producto</p>
-
-                    <form method="post" action="#" class="search_container">
-
-                        <select class="search_input select-custom">
-                            <option value="" disabled selected>Categoría</option>
-                            <option value="categoria1">Empanadas</option>
-                            <option value="categoria2">Pastelitos</option>
-                            <option value="categoria3">Especiales</option>
-                            <option value="categoria4">Bebidas Frías</option>
-                            <option value="categoria5">Otros</option>
-                        </select>
-
-                        <input class="search_input" list="products" type="text" name="search" placeholder="Nombre del Producto">
-
-                        <!--
-                        <datalist id="products">
-                            <?php
-                            $sql = "select NAME from products";
-                            
-                            $consult = mysqli_query($connection,$sql);
-                            
-                            while($ver=mysqli_fetch_array($consult)){
-                            
-                            ?><option value="<?php echo $ver[0]; ?>">
-                                
-                            <?php } ?>
-                    
-                        </datalist>
-                        -->
-
-                        <button type="submit" class="search_button">
-                            <i class='bx bx-search'></i>
-                        </button>
-                    </form>
-
-                </div>
-
-            </div>
+            
 
         </section>
 
