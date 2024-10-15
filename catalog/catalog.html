@@ -62,41 +62,46 @@
 
                 <div class="table_header">
 
-                    <p>Detalles del Producto</p>
+                    <div class="table_name">
+                        <p>Detalles del Producto</p>
+                    </div>
 
-                    <form method="post" action="#" class="search_container">
+                    <div class="table_form">
+                        <form method="post" action="#" class="search_container">
 
-                        <select class="search_input select-custom">
-                            <option value="" disabled selected>Categoría</option>
-                            <option value="categoria1">Empanadas</option>
-                            <option value="categoria2">Pastelitos</option>
-                            <option value="categoria3">Especiales</option>
-                            <option value="categoria4">Bebidas Frías</option>
-                            <option value="categoria5">Otros</option>
-                        </select>
-
-                        <input class="search_input" list="products" type="text" name="search" placeholder="Nombre del Producto">
-
-                        <!--
-                        <datalist id="products">
-                            <?php
-                            $sql = "select NAME from products";
-                            
-                            $consult = mysqli_query($connection,$sql);
-                            
-                            while($ver=mysqli_fetch_array($consult)){
-                            
-                            ?><option value="<?php echo $ver[0]; ?>">
+                            <select class="search_input select-custom">
+                                <option value="" disabled selected>Categoría</option>
+                                <option value="categoria1">Empanadas</option>
+                                <option value="categoria2">Pastelitos</option>
+                                <option value="categoria3">Especiales</option>
+                                <option value="categoria4">Bebidas Frías</option>
+                                <option value="categoria5">Otros</option>
+                            </select>
+    
+                            <input class="search_input" list="products" type="text" name="search" placeholder="Nombre del Producto">
+    
+                            <!--
+                            <datalist id="products">
+                                <?php
+                                $sql = "select NAME from products";
                                 
-                            <?php } ?>
-                    
-                        </datalist>
-                        -->
-
-                        <button type="submit" class="search_button">
-                            <i class='bx bx-search'></i>
-                        </button>
-                    </form>
+                                $consult = mysqli_query($connection,$sql);
+                                
+                                while($ver=mysqli_fetch_array($consult)){
+                                
+                                ?><option value="<?php echo $ver[0]; ?>">
+                                    
+                                <?php } ?>
+                        
+                            </datalist>
+                            -->
+    
+                            <button type="submit" class="search_button">
+                                <i class='bx bx-search'></i>
+                            </button>
+                            
+                        </form>
+                    </div>
 
                 </div>
 
@@ -159,7 +164,7 @@
             <div class="footer-box">
                 
                 <div class="footer-text">
-                    <p>&copy; 2024 El Cóctel de los Batidos 2025</p>
+                    <p>&copy; El Cóctel de los Batidos 2025</p>
                 </div>
                 
                 <div class="footer-creater">
