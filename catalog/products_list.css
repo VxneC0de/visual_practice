@@ -98,6 +98,7 @@ th, td{
     padding: 10px 20px;
     word-break: break-all;
     text-align: center;
+    word-break: keep-all;
 }
 
 td img{
