@@ -128,6 +128,20 @@ td button i{
     font-size: 20px;
 }
 
+td a{
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 6px;
+    padding-top: 10px;
+    color: var(--white);
+}
+
+td a i{
+    font-size: 20px;
+}
+
 .button_status_1, .button_action_1{
     background-color: #185519;
 }
