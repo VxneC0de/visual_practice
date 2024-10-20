@@ -1,6 +1,6 @@
 .table{
     width: 100%;
-    border: 1px solid var(--medio);
+    border: 1px solid #347928;
 }
 
 /*==================== HEADER TABLE ====================*/
@@ -15,7 +15,7 @@
 }
 
 .table_header p{
-    color: var(--white);
+    color: #ffffff;
     font-size: 20px;
     font-weight: 500;
     text-align: center;
@@ -31,8 +31,8 @@
 
 .search_input{
     font-size: 18px;
-    background: var(--claro);
-    color: var(--grey_2);
+    background: #C0EBA6;
+    color: #242526;
     height: 35px;
     width: 100%;
     padding: 0 10px 0 15px;
@@ -49,13 +49,13 @@
 .search_button{
     font-size: 25px;
     font-weight: 500;
-    color: var(--medio);
+    color: #347928;
     height: 40px;
     width: 100px;
-    border: 1px var(--claro) solid;
+    border: 1px #C0EBA6 solid;
     border-radius: 50%;
     outline: none;
-    background: var(--white);
+    background: #ffffff;
     cursor: pointer;
     transition: .3s ease-in-out;
     display: flex;
@@ -88,13 +88,13 @@ table{
 thead th{
     position: sticky;
     top: 0;
-    background-color: var(--claro);
-    color: var(--grey_2);
+    background-color: #C0EBA6;
+    color: #242526;
     font-size: 14.5px;
 }
 
 th, td{
-    border-bottom: 1px solid var(--medio);
+    border-bottom: 1px solid #347928;
     padding: 10px;
     word-break: break-all;
     text-align: center;
@@ -106,13 +106,13 @@ td img{
     width: 60px;
     object-fit: cover;
     border-radius: 15px;
-    border: 2px solid var(--medio);
+    border: 2px solid #347928;
 }
 
 tr:hover td{
-    color: var(--claro);
+    color: #C0EBA6;
     cursor: pointer;
-    background-color: var(--grey_2);
+    background-color: #242526;
 }
 
 td button{
@@ -121,7 +121,7 @@ td button{
     border-radius: 6px;
     cursor: pointer;
     padding: 5px;
-    color: var(--white);
+    color: #ffffff;
 }
 
 td button i{
@@ -135,7 +135,7 @@ td a{
     cursor: pointer;
     padding: 6px;
     padding-top: 10px;
-    color: var(--white);
+    color: #ffffff;
 }
 
 td a i{
@@ -170,21 +170,21 @@ td a i{
     justify-content: flex-end;
     width: 100%;
     padding: 10px 20px;
-    background-color: var(--white);
-    border-top: 1px solid var(--medio);
+    background-color: #ffffff;
+    border-top: 1px solid #347928;
 }
 
 .pagination div{
     padding: 10px;
-    border: 2px solid var(--claro);
+    border: 2px solid #C0EBA6;
     height: 40px;
     width: 40px;
     border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--medio);
-    color: var(--white);
+    background-color: #347928;
+    color: #ffffff;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
     margin: 0 5px;
     cursor: pointer;
