@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./header.css">
+    <title>Sing In</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+
+    <div class="container">
+
+        <nav>
+            <div class="wrapper_nav">
+                
+                <div class="logo"><a href="#">LOGO.</a></div>
+                <input type="radio" name="slider" id="menu-btn">
+                <input type="radio" name="slider" id="close-btn">
+                
+                <ul class="nav-links">
+                    
+                    <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                    <li><a href="#">Inicio</a></li>
+                    
+                    <li>
+                        <a href="#" class="desktop-item">Productos ▾</a>
+                        <input type="checkbox" id="showDrop">
+                        <label for="showDrop" class="mobile-item">Productos ▾</label>
+                        
+                        <ul class="drop-menu">
+                            <li><a href="#">Empanadas</a></li>
+                            <li><a href="#">Pastelitos</a></li>
+                            <li><a href="#">Especiales</a></li>
+                            <li><a href="#">Bebidas Frías</a></li>
+                            <li><a href="#">Bollitos</a></li>
+                            <li><a href="#">Hallacas</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#">Contactos</a></li>
+                
+                </ul>
+                
+                <div class="header-right">
+
+                    <div class="cart_icon">
+                        <a href="#"><ion-icon name="cart"></ion-icon></a>
+                        <span>0</span>
+                    </div>
+                    
+                    <div class="user_icon">
+                        <a href="#"><ion-icon name="person"></ion-icon></a>
+                        <div class="list-item">
+                          <ul>
+                            <li class="sub-item">
+                              <h4>Vanessa</h4>
+                            </li>
+                            <li class="sub-item scale">
+                              <i class='bx bx-list-ul'></i>
+                              <a href="#">Mis Ordenes</a>
+                            </li>
+                            <li class="sub-item scale">
+                              <i class='bx bx-cog'></i>
+                              <a href="#">Editar Perfil</a>
+                            </li>
+                            <li class="sub-item scale">
+                              <i class='bx bx-log-out-circle'></i>
+                              <a href="#">Cerrar Sesión</a>
+                            </li>
+                          </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="cart_sidebar">
+                  
+                  <button class="close_cart"><i class="fas fa-times"></i></button>
+                  
+                  <div class="cart_header">
+                    <h2>Tu Pedido</h2>
+                  </div>
+
+                  <div class="cart_items">
+                    
+                    <div class="cart_item">
+
+                      <div class="remove_item">
+                        <span><i class='bx bx-trash'></i></span>
+                      </div>
+
+                      <div class="item_details">
+                        <div class="item_details_title">
+                            <p>Empanada de Carne</p>
+                        </div>
+
+                        <div class="item_details_price">
+                            <strong>Bs. <span>35</span></strong> 
+                        </div> 
+                      </div>
+
+                      <div class="qty">
+                        <span>-</span>
+                        <strong>1</strong>
+                        <span>+</span>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="cart_actions">
+
+                    <div class="subtotal">
+                      <p>SUBTOTAL:</p>
+                      <strong>Bs. <span>525</span></strong>
+                      <strong>$. <span>10</span></strong>
+                    </div>
+
+                    <button class="clean_btn">VACIAR CARRITO</button>
+                    <button class="checkout_btn">IR AL PAGO</button> <!-- Botón de pago -->
+                  </div>
+                  
+                </div>
+                
+                
+                <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+            
+            </div>
+        
+        </nav>
+
+        <section class="content">
+
+        </section>
+
+        <footer class="footer">
+        
+            <div class="footer-box">
+                
+                <div class="footer-text">
+                    <p>&copy; 2024 El Cóctel de los Batidos 2025</p>
+                </div>
+                
+                <div class="footer-creater">
+                    <a href="#">By VxneC0de</a>
+                </div>
+              
+            </div>
+      
+        </footer>
+
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const cartIcon = document.querySelector('.cart_icon a');
+        const cartSidebar = document.querySelector('.cart_sidebar');
+        const closeCart = document.querySelector('.close_cart');
+    
+        cartIcon.addEventListener('click', function(event) {
+          event.preventDefault();
+          cartSidebar.style.right = '0';
+        });
+    
+        closeCart.addEventListener('click', function() {
+          cartSidebar.style.right = '-100%';
+        });
+        
+        // Función para agregar un producto a la lista
+        /*function addToCart(itemName) {
+          const cartItems = document.querySelector('.cart-items');
+          const newItem = document.createElement('li');
+          newItem.textContent = itemName;
+          cartItems.appendChild(newItem);
+        }
+        
+        // Ejemplo de agregar un producto
+        addToCart('Empanada de Carne');*/
+      });
+    </script>
+    
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>
