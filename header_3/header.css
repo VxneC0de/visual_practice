@@ -613,7 +613,7 @@ nav input{
     opacity: 0;
     visibility: hidden;
     top: 85px;
-    transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease; /* Transiciones */
+    transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease;
 }
 
 .user_icon:hover .list-item {
@@ -624,13 +624,18 @@ nav input{
     opacity: 1;
 }
 
+.center{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
 .sub-item {
     width: 100%;
     height: 3.5rem;
     display: flex;
     align-items: center;
     gap: 0.725rem;
-    padding: 2rem 1.5rem;
+    padding: 2rem 2rem;
 }
 
 .scale{
@@ -639,6 +644,9 @@ nav input{
 
 .sub-item h4{
     color: #ffffff;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-left: 20px;
 }
 
 .user_icon .list-item a {
@@ -668,9 +676,6 @@ nav input{
     font-size: 20px; 
     color: #ffffff; /* Ensure the icon color matches the text color */
 }
-
-
-
 
 
 
