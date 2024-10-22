@@ -29,20 +29,29 @@
   }
   
   /* Estilos para el encabezado */
+
+  .user_header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .name_user{
+    height: 30%;
+  }
+
   .user_header h2 {
     color: #fff;
-    margin-bottom: 20px;
+  }
+
+  .user_header h4{
+    color: #ffffffdc;
+    font-style: italic;
   }
   
   /* Estilos para los items del carrito */
-  .user_items {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-    overflow-y: auto; /* Permite el scroll si la lista es larga */
-    flex: 1;
-  }
-  
   .user_items {
     list-style: none;
     padding: 0;
@@ -83,7 +92,7 @@
     font-size: 20px;
     user-select: none;
     display: flex;
-      align-items: center;
+    align-items: center;
   }
   
   .user_item .item_details {
@@ -93,39 +102,32 @@
     align-items: center;
     justify-content: space-around;
   }
-  
-  .user_item .item_details p {
-    margin: 0;
-    font-weight: 500;
-  }
-  
-  .user_item .item_details strong {
-    display: block; /* Asegura que el precio esté en una nueva línea */
-  }
-  
-  .user_item .qty {
+
+  .item_details_title_user{
     display: flex;
-    align-items: center;
-    margin-top: 0; /* Eliminado el margen superior */
-  }
-  
-  .user_item .qty span {
-    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
-    background: #C0EBA6;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
+    gap: 0.725rem;
+    transition: all 0.3s ease-out;
+  }
+
+  .item_details_title_user:hover{
+    transform: scale(1.15) translateY(-4px);
+}
+  
+  .user_item .item_details .item_details_title_user a {
+    margin: 0;
+    font-weight: 500;
+    text-decoration: none;
+    color: #242526;
   }
   
-  .user_item .qty strong {
-    margin: 0 10px;
-  }
-  
+  .user_item .item_details .item_details_title_user i {
+    font-size: 20px; 
+    color: #242526;
+}
+
   /* Custom scroll bar */
   .user_sidebar::-webkit-scrollbar {
     width: 10px;
@@ -151,4 +153,6 @@
           top: 20px;
           right: 20px;
         }
-      }
+    }
+
+    
