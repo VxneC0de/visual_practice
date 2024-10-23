@@ -250,94 +250,115 @@
     
     </script>
 
+    <form action="#" class="register-container" id="register">
+        <div class="top">
+            <span>¿Tienes una cuenta? <a href="#" onclick="login()">Accede</a></span>
+            <header>Inscribirse</header>
+        </div>
+        <div class="input-box">
+            <input type="text" class="input-field" placeholder="Nombre de Usuario" id="usernameRegister">
+            <i class="bx bx-user"></i>
+            <div class="error"></div>
+        </div>
+        <div class="input-box">
+            <input type="text" class="input-field" placeholder="Correo Electrónico" id="emailRegister">
+            <i class="bx bx-envelope"></i>
+            <div class="error"></div>
+        </div>
+        <div class="input-box">
+            <input type="password" class="input-field" placeholder="Contraseña" id="passwordRegister">
+            <i class="bx bx-lock-alt"></i>
+            <div class="error"></div>
+        </div>
+        <div class="input-box">
+            <input type="password" class="input-field" placeholder="Confirmar Contraseña" id="confirmRegister">
+            <i class="bx bx-lock-alt"></i>
+            <div class="error"></div>
+        </div>
+        <div class="input-box">
+            <input type="submit" class="submit" value="Registrarse">
+        </div>
+        <div class="two-col">
+            <div class="one">
+                <input type="checkbox" id="register-check">
+                <label for="register-check"> Recuérdame</label>
+            </div>
+            <div class="two">
+                <label><a href="#">Términos y condiciones</a></label>
+            </div>
+        </div>
+    </form>
+    
     <script>
-        const setError = (element, message) => {
-            const errorDisplay = element.parentElement.querySelector(".error");
-            errorDisplay.innerText = message;
-            errorDisplay.style.display = 'block';
+    const setError = (element, message) => {
+        const errorDisplay = element.parentElement.querySelector(".error");
+        errorDisplay.innerText = message;
+        errorDisplay.style.display = 'block';
+    }
+    
+    const setSuccess = element => {
+        const inputBox = element.parentElement;
+        const errorDisplay = inputBox.querySelector(".error");
+        errorDisplay.innerText = '';
+        inputBox.classList.remove('error');
+    }
+    
+    const isValidEmail = email => {
+        const re = /^(([^<>()[\\.,;:\s@"]+(\.[^<>()[\\.,;:\s@"]+)*)|(".+"))@(gmail|hotmail|yahoo|outlook)\.(com|info|es|io)$/;
+        return re.test(String(email).toLowerCase());
+    }
+    
+    document.getElementById('register').addEventListener('submit', function(event) {
+        const usernameRegister = document.getElementById('usernameRegister');
+        const emailRegister = document.getElementById('emailRegister');
+        const passwordRegister = document.getElementById('passwordRegister');
+        const confirmRegister = document.getElementById('confirmRegister');
+        let valid = true;
+    
+        document.querySelectorAll('.error').forEach((el) => el.innerHTML = '');
+    
+        if (usernameRegister.value.trim() === '') {
+            setError(usernameRegister, 'El nombre de usuario es requerido');
+            valid = false;
+        } else {
+            setSuccess(usernameRegister);
         }
-        
-        const setSuccess = element => {
-            const inputBox = element.parentElement;
-            const errorDisplay = inputBox.querySelector(".error");
-            errorDisplay.innerText = '';
-            inputBox.classList.remove('error');
+    
+        if (emailRegister.value.trim() === '') {
+            setError(emailRegister, 'El email es requerido');
+            valid = false;
+        } else if (!isValidEmail(emailRegister.value.trim())) {
+            setError(emailRegister, 'Proporcionar un email válido');
+            valid = false;
+        } else {
+            setSuccess(emailRegister);
         }
-        
-        const isValidEmail = email => {
-            const re = /^(([^<>()[\\.,;:\s@"]+(\.[^<>()[\\.,;:\s@"]+)*)|(".+"))@(gmail|hotmail|yahoo|outlook)\.(com|info|es|io)$/;
-            return re.test(String(email).toLowerCase());
+    
+        if (!passwordRegister.value.match(/(?=(.*[0-9]){2})/)) {
+            setError(passwordRegister, 'La contraseña debe tener al menos 2 números.');
+            valid = false;
+        } else if (!passwordRegister.value.match(/[!@#$%^&*]/)) {
+            setError(passwordRegister, 'La contraseña debe tener al menos un signo especial.');
+            valid = false;
+        } else if (!passwordRegister.value.match(/.{8,}/)) {
+            setError(passwordRegister, 'La contraseña debe ser de al menos 8 caracteres.');
+            valid = false;
+        } else {
+            setSuccess(passwordRegister);
         }
-        
-        document.getElementById('register').addEventListener('submit', function(event) {
-            const usernameRegister = document.getElementById('usernameRegister');
-            const emailRegister = document.getElementById('emailRegister');
-            const passwordRegister = document.getElementById('passwordRegister');
-            const confirmRegister = document.getElementById('confirmRegister');
-            let valid = true;
-        
-            document.querySelectorAll('.error').forEach((el) => el.innerHTML = '');
-        
-            if (usernameRegister.value.trim() === '') {
-                setError(usernameRegister, 'El nombre de usuario es requerido');
-                valid = false;
-            } else {
-                setSuccess(usernameRegister);
-            }
-        
-            if (emailRegister.value.trim() === '') {
-                setError(emailRegister, 'El email es requerido');
-                valid = false;
-            } else if (!isValidEmail(emailRegister.value.trim())) {
-                setError(emailRegister, 'Proporcionar un email válido');
-                valid = false;
-            } else {
-                setSuccess(emailRegister);
-            }
-        
-            if (passwordRegister.value !== confirmRegister.value) {
-                setError(confirmRegister, 'Las contraseñas no coinciden. Inténtalo de nuevo.');
-                valid = false;
-            } else {
-                setSuccess(confirmRegister);
-            }
-        
-            if (!valid) {
-                event.preventDefault();
-            }
-        });
-        </script>
-        
-        <script>
-        document.getElementById('register').addEventListener('submit', function(event) {
-            const password = document.getElementById('passwordRegister').value;
-            const confirm = document.getElementById('confirmRegister').value;
-            let valid = true;
-        
-            document.querySelectorAll('.error').forEach((el) => el.innerHTML = '');
-        
-            const hasTwoNumbers = /(?=(.*[0-9]){2})/;
-            const hasSpecialChar = /[!@#$%^&*]/;
-            const hasMinLength = /.{8,}/;
-        
-            if (!password.match(hasTwoNumbers)) {
-                setError(document.getElementById('passwordRegister'), 'La contraseña debe tener al menos 2 números.');
-                valid = false;
-            }
-            if (!password.match(hasSpecialChar)) {
-                setError(document.getElementById('passwordRegister'), 'La contraseña debe tener al menos un signo especial.');
-                valid = false;
-            }
-            if (!password.match(hasMinLength)) {
-                setError(document.getElementById('passwordRegister'), 'La contraseña debe ser de al menos 8 caracteres.');
-                valid = false;
-            }
-        
-            if (!valid) {
-                event.preventDefault();
-            }
-        });
-        </script>
+    
+        if (passwordRegister.value !== confirmRegister.value) {
+            setError(confirmRegister, 'Las contraseñas no coinciden. Inténtalo de nuevo.');
+            valid = false;
+        } else {
+            setSuccess(confirmRegister);
+        }
+    
+        if (!valid) {
+            event.preventDefault();
+        }
+    });
+    </script>
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
