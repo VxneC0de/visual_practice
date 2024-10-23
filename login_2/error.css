@@ -1,0 +1,25 @@
+.error {
+    color: #dd1335;
+    font-weight: 600;
+    font-size: 14.5px;
+    padding-top: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.error:last-child {
+    padding-top: 0;
+}
+  
+.input-box {
+    position: relative;
+    margin-bottom: 10px;
+}
+  
+.input-box .error {
+    position: absolute;
+    top: 52px;
+    left: 20px;
+    width: 100%;
+}
+  
