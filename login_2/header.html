@@ -128,7 +128,7 @@
                     <div class="input-box">
                         <input type="text" class="input-field" placeholder="Usuario o Correo">
                         <i class="bx bx-user"></i>
-                        <div class="error"></div>
+                        <div class="error">La contraseña debe tener al menos un signo especial.</div>
                     </div>
     
                     <div class="input-box">
@@ -155,43 +155,35 @@
                     </div>
     
                 </form>
-        
-        
+              
                 <form action="#" class="register-container" id="register">
-        
                     <div class="top">
                         <span>¿Tienes una cuenta? <a href="#" onclick="login()">Accede</a></span>
                         <header>Inscribirse</header>
                     </div>
-                    
                     <div class="input-box">
-                        <input type="text" class="input-field" placeholder="Nombre de Usuario">
+                        <input type="text" class="input-field" placeholder="Nombre de Usuario" id="usernameRegister">
                         <i class="bx bx-user"></i>
                         <div class="error"></div>
                     </div>
-        
                     <div class="input-box">
-                        <input type="text" class="input-field" placeholder="Correo Electrónico">
+                        <input type="text" class="input-field" placeholder="Correo Electrónico" id="emailRegister">
                         <i class="bx bx-envelope"></i>
                         <div class="error"></div>
                     </div>
-                    
                     <div class="input-box">
                         <input type="password" class="input-field" placeholder="Contraseña" id="passwordRegister">
                         <i class="bx bx-lock-alt"></i>
                         <div class="error"></div>
                     </div>
-        
                     <div class="input-box">
-                        <input type="password" class="input-field" placeholder="Confirmar  Contraseña" id="confirmRegister">
+                        <input type="password" class="input-field" placeholder="Confirmar Contraseña" id="confirmRegister">
                         <i class="bx bx-lock-alt"></i>
                         <div class="error"></div>
                     </div>
-        
                     <div class="input-box">
                         <input type="submit" class="submit" value="Registrarse">
                     </div>
-        
                     <div class="two-col">
                         <div class="one">
                             <input type="checkbox" id="register-check">
@@ -201,7 +193,6 @@
                             <label><a href="#">Términos y condiciones</a></label>
                         </div>
                     </div>
-        
                 </form>
                 
             </div>
@@ -249,45 +240,6 @@
         }
     
     </script>
-
-    <form action="#" class="register-container" id="register">
-        <div class="top">
-            <span>¿Tienes una cuenta? <a href="#" onclick="login()">Accede</a></span>
-            <header>Inscribirse</header>
-        </div>
-        <div class="input-box">
-            <input type="text" class="input-field" placeholder="Nombre de Usuario" id="usernameRegister">
-            <i class="bx bx-user"></i>
-            <div class="error"></div>
-        </div>
-        <div class="input-box">
-            <input type="text" class="input-field" placeholder="Correo Electrónico" id="emailRegister">
-            <i class="bx bx-envelope"></i>
-            <div class="error"></div>
-        </div>
-        <div class="input-box">
-            <input type="password" class="input-field" placeholder="Contraseña" id="passwordRegister">
-            <i class="bx bx-lock-alt"></i>
-            <div class="error"></div>
-        </div>
-        <div class="input-box">
-            <input type="password" class="input-field" placeholder="Confirmar Contraseña" id="confirmRegister">
-            <i class="bx bx-lock-alt"></i>
-            <div class="error"></div>
-        </div>
-        <div class="input-box">
-            <input type="submit" class="submit" value="Registrarse">
-        </div>
-        <div class="two-col">
-            <div class="one">
-                <input type="checkbox" id="register-check">
-                <label for="register-check"> Recuérdame</label>
-            </div>
-            <div class="two">
-                <label><a href="#">Términos y condiciones</a></label>
-            </div>
-        </div>
-    </form>
     
     <script>
     const setError = (element, message) => {
