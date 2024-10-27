@@ -36,11 +36,6 @@ body{
     outline: none;
     scroll-behavior: smooth;
     background-color: var(--soft);
-    overflow: hidden;
-}
-
-html{
-    overflow-x: hidden;
 }
 
 .container{
