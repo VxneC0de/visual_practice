@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./menu.css">
-    <title>Menu</title>
+    <title>Sing In</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-
-    <div class="container">
 
         <nav>
             <div class="wrapper_nav">
@@ -165,65 +163,33 @@
         
         </nav>
 
-        <main class="content">
+        <section class="hero">
 
-          <section></section>
+            <div class="hero_text">
+                <h5>#Coffee for hot days</h5>
+                <h1>- Cold Brew</h1>
+                <p>Boots your productivity and build your mood eith a glass of coffee in the morning. Coffee has a stimulating effect.</p>
 
-          <!-- 
-          <div class="menu">
-            
-            <div class="producto">
-              <img src="mini-bag.jpg" alt="Mini Bag">
-              <h2>Mini Bag</h2>
-              <p>4 mini churros acompañados de un topping a elegir.</p>
-              <p class="precio">$2,99</p>
-              <button>Agregar</button>
-            </div>
-        
-            <div class="producto">
-              <img src="churros-chocolate.jpg" alt="Churros con Chocolate">
-              <h2>4 churros + Jarra de Chocolate</h2>
-              <p>4 churros grandes con una jarra de chocolate caliente.</p>
-              <p class="precio">$11,99</p>
-              <button>Agregar</button>
+                <div class="main_hero">
+                    <a href="#" class="btn_hero">Order Now</a>
+                    <a href="#" class="price_hero">
+                        $16.00 | <span>Regular Price</span>
+                    </a>
+                </div>
+
             </div>
 
-            <div class="producto">
-              <img src="churros-helado.jpg" alt="Churros con Helado">
-              <h2>Churros + Helado</h2>
-              <p>Caja grande churros con un helado twist de 16 onzas.</p>
-              <p class="precio">$20,00</p>
-              <button>Agregar</button>
+            <div class="hero_img">
+                <img src="./img/hero.png" alt="hero_img">
             </div>
 
-            <div class="producto">
-              <img src="duo-churros.jpg" alt="Dúo de Churros">
-              <h2>Dúo de churros</h2>
-              <p>Dos churros grandes.</p>
-              <p class="precio">$2,50</p>
-              <button>Agregar</button>
+            <div class="icons_hero">
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-whatsapp'></i></a>
             </div>
 
-            <div class="producto">
-              <img src="churro-box.jpg" alt="Churro Box">
-              <h2>Churro Box</h2>
-              <p>Caja de 20 mini churros acompañados de 3 toppings.</p>
-              <p class="precio">$12,00</p>
-              <button>Agregar</button>
-            </div>
+        </section>
 
-            <div class="producto">
-              <img src="mini-box.jpg" alt="Mini Box">
-              <h2>Mini Box</h2>
-              <p>Caja pequeña de mini churros con 8 unidades con un topping a selección.</p>
-              <p class="precio">$6,00</p>
-              <button>Agregar</button>
-            </div>
-          </div>
-          -->
-          
-
-        </main>
 
         <footer class="footer">
         
@@ -241,32 +207,9 @@
       
         </footer>
 
-    </div>
 
 
-    <script>
-
-        var a = document.getElementById("loginBtn");
-        var b = document.getElementById("registerBtn");
-        var x = document.getElementById("login");
-        var y = document.getElementById("register");
     
-        function login() {
-            x.style.left = "4px";
-            y.style.right = "-520px";
-            x.style.opacity = 1;
-            y.style.opacity = 0;
-        }
-    
-        function register() {
-            x.style.left = "-510px";
-            y.style.right = "5px";
-            x.style.opacity = 0;
-            y.style.opacity = 1;
-        }
-    
-    </script>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
           const userIcon = document.querySelector('.user_icon a');
@@ -283,35 +226,35 @@
           });
           
         });
-    </script>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const cartIcon = document.querySelector('.cart_icon a');
-        const cartSidebar = document.querySelector('.cart_sidebar');
-        const closeCart = document.querySelector('.close_cart');
-    
-        cartIcon.addEventListener('click', function(event) {
-          event.preventDefault();
-          cartSidebar.style.right = '0';
+      </script>
+  
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const cartIcon = document.querySelector('.cart_icon a');
+          const cartSidebar = document.querySelector('.cart_sidebar');
+          const closeCart = document.querySelector('.close_cart');
+      
+          cartIcon.addEventListener('click', function(event) {
+            event.preventDefault();
+            cartSidebar.style.right = '0';
+          });
+      
+          closeCart.addEventListener('click', function() {
+            cartSidebar.style.right = '-100%';
+          });
+          
+          // Función para agregar un producto a la lista
+          /*function addToCart(itemName) {
+            const cartItems = document.querySelector('.cart-items');
+            const newItem = document.createElement('li');
+            newItem.textContent = itemName;
+            cartItems.appendChild(newItem);
+          }
+          
+          // Ejemplo de agregar un producto
+          addToCart('Empanada de Carne');*/
         });
-    
-        closeCart.addEventListener('click', function() {
-          cartSidebar.style.right = '-100%';
-        });
-        
-        // Función para agregar un producto a la lista
-        /*function addToCart(itemName) {
-          const cartItems = document.querySelector('.cart-items');
-          const newItem = document.createElement('li');
-          newItem.textContent = itemName;
-          cartItems.appendChild(newItem);
-        }
-        
-        // Ejemplo de agregar un producto
-        addToCart('Empanada de Carne');*/
-      });
-    </script>
+      </script>
     
     
 
