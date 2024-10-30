@@ -94,7 +94,7 @@
 
 /*======================== BANNER =================== */
 
-.banner-container{
+.banner_container{
     display: grid;
     gap: 1;
     grid-auto-rows: 200px;
@@ -144,6 +144,8 @@
     color: var(--primary-color);
     background-color: var(--secondary_color);
 }
+
+/*======================== ORDER =================== */
 
 .order_container .section_header{
     margin-bottom: 1rem;
@@ -269,4 +271,78 @@
 .footer_bar a{
     color: #ffffff;
     font-size: 1rem;
+}
+
+/* =================== MEDIA QUERY ================= */
+
+@media screen and (min-width: 540px) {
+
+    .banner_container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .banner_card:nth-child(1){
+        grid-area: 1/1/2/3;
+    }
+
+    .order_grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    .header_container{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .header_image{
+        grid-area: 1/2/2/3;
+    }
+
+    .header_content h2{
+        margin-inline-start: unset;
+    }
+
+    .header_content h1{
+        text-align: left;
+    }
+
+    .banner_container{
+        gap: 0px;
+    }
+
+    .banner_card{
+        padding: 1.5rem;
+        margin-left: 1rem;
+    }
+
+    .banner_card:nth-child(1){
+        grid-area: 1/1/3/2;
+    }
+
+    .order_grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer_content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer_links li{
+        justify-content: flex-end;
+    }
+
+    .footer_socials{
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    .order_grid{
+        gap: 2rem;
+    }
 }
