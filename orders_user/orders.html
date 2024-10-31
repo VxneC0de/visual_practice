@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./orders.css">
+    <title>Sing In</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+
+    <div class="container">
+
+        <nav>
+            <div class="wrapper_nav">
+                
+                <div class="logo"><a href="#">LOGO.</a></div>
+                <input type="radio" name="slider" id="menu-btn">
+                <input type="radio" name="slider" id="close-btn">
+                
+                <ul class="nav-links">
+                  
+                  <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                  <li><a href="#">Ordenes</a></li>
+
+                  <li>
+                      
+                    <a href="#" class="desktop-item">Productos ▾</a>
+                    <input type="checkbox" id="showDrop">
+                    <label for="showDrop" class="mobile-item">Productos ▾</label>
+                    
+                    <ul class="drop-menu">
+                        <li><a href="#">Subir Producto</a></li>
+                        <li><a href="#">Ver Productos</a></li>
+                    </ul>
+                  
+                  </li>
+                  
+                  <li><a href="#">Tienda</a></li>
+              
+                </ul> 
+                
+                <div class="header-right">
+                    
+                    <div class="user_icon">
+                        <a href="#"><ion-icon name="person"></ion-icon></a>
+                    </div>
+                    
+                </div>
+
+                <div class="user_sidebar">
+                  
+                  <button class="close_user"><i class="fas fa-times"></i></button>
+                  
+                  <div class="user_header">
+                    <div class="name_user">
+                      <h2>Carol</h2>
+                    </div>
+                    <div class="email_user">
+                      <h4>carol@gmail.com</h4>
+                    </div>
+                  </div>
+
+                  <div class="user_items">
+
+                    <div class="user_item">
+
+                      <div class="item_details">
+                        <div class="item_details_title_user">
+                          <i class='bx bx-cog'></i>
+                          <a href="#">Editar Perfil</a>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="user_item">
+
+                      <div class="item_details">
+                        <div class="item_details_title_user">
+                          <i class='bx bx-log-out-circle'></i>
+                          <a href="#">Cerrar Sesión</a>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                  
+                </div>
+                
+                <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+            
+            </div>
+        
+        </nav>
+
+        <section class="content">
+
+            <div class="table">
+
+                <div class="table_header">
+
+                    <div class="table_name">
+                        <p>Detalles de los Pedidos</p>
+                    </div>
+
+                </div>
+
+                <div class="table_section">
+
+                    <table>
+
+                        <thead>
+                            <th>N° de Orden</th>
+                            <th>Cliente</th>
+                            <th>Monto</th>
+                            <th>Status</th>
+                            <th>Ver Orden</th>
+                        </thead>
+
+                        <tbody>
+                            <td>1</td>
+                            <td><p>Vanessa</p><p>Rubio</p></td>
+                            <td>Bs. 40</td>
+                            <td>
+                                <div>
+                                  <h5>En Proceso.</h5>
+                                </div>
+                            </td>
+                            <td>
+                                <a class="button_action_1"><i class='bx bx-show-alt'></i></a>
+                            </td>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="pagination">
+
+                    <div><i class='bx bx-chevrons-left'></i></div>
+                    <div><i class='bx bx-chevron-left'></i></div>
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div><i class='bx bx-chevron-right'></i></div>
+                    <div><i class='bx bx-chevrons-right'></i></div>
+                    
+                </div>
+
+            </div>
+
+            <div class="show_order">
+
+              <div class=""></div>
+
+            </div>
+
+        </section>
+
+        <footer class="footer">
+        
+            <div class="footer-box">
+                
+                <div class="footer-text">
+                    <p>&copy; El Cóctel de los Batidos 2025</p>
+                </div>
+                
+                <div class="footer-creater">
+                    <a href="#">By VxneC0de</a>
+                </div>
+              
+            </div>
+      
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const userIcon = document.querySelector('.user_icon a');
+          const userSidebar = document.querySelector('.user_sidebar');
+          const closeuser = document.querySelector('.close_user');
+      
+          userIcon.addEventListener('click', function(event) {
+            event.preventDefault();
+            userSidebar.style.right = '0';
+          });
+      
+          closeuser.addEventListener('click', function() {
+            userSidebar.style.right = '-100%';
+          });
+          
+        });
+      </script>
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>

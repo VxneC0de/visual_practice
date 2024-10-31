@@ -163,7 +163,7 @@
 }
 
 .order_card{
-    padding: 2rem 1rem;
+    padding: 1.2rem 0.5rem;
     border-radius: 1rem;
     text-align: center;
     transition: 0.3s;
@@ -174,7 +174,7 @@
 }
 
 .order_card img{
-    max-width: 250px;
+    max-width: 150px;
     margin-inline: auto;
     margin-bottom: 2rem;
     filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.6));

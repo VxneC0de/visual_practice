@@ -1,0 +1,14 @@
+.content{
+    flex: 1;
+    padding: 100px 20px 20px; /* Ajusta el padding superior para evitar que el contenido quede debajo del header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 970px){
+    .content{
+        flex: 1;
+        padding: 100px 20px 50px;
+    }
+}
