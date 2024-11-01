@@ -1,0 +1,234 @@
+.table{
+    width: 100%;
+    border: 1px solid #347928;
+}
+
+/*==================== HEADER TABLE ====================*/
+
+.table_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #347928;
+    flex-direction: row;
+}
+
+.table_header p{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.search_container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.search_input{
+    font-size: 18px;
+    background: #C0EBA6;
+    color: #242526;
+    height: 35px;
+    width: 100%;
+    padding: 0 10px 0 15px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
+}
+
+.search_input:hover, .search_input:focus{
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+.search_button{
+    font-size: 25px;
+    font-weight: 500;
+    color: #347928;
+    height: 40px;
+    width: 100px;
+    border: 1px #C0EBA6 solid;
+    border-radius: 50%;
+    outline: none;
+    background: #ffffff;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_button:hover{
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-input-placeholder{
+    color: #242526;
+}
+
+/*==================== LIST TABLE ====================*/
+
+.table_section{
+    height: 650px;
+    overflow: auto;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    min-width: 900px;
+    border-collapse: collapse;
+}
+
+thead th{
+    position: sticky;
+    top: 0;
+    background-color: #C0EBA6;
+    color: #242526;
+    font-size: 14.5px;
+}
+
+th, td{
+    border-bottom: 1px solid #347928;
+    padding: 10px;
+    word-break: break-all;
+    text-align: center;
+    word-break: keep-all;
+}
+
+td img{
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #347928;
+}
+
+tr:hover td{
+    color: #C0EBA6;
+    cursor: pointer;
+    background-color: #242526;
+}
+
+td button{
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 5px;
+    color: #ffffff;
+}
+
+td button i{
+    font-size: 20px;
+}
+
+td a{
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 3px 6px;
+    padding-top: 10px;
+    color: #ffffff;
+}
+
+td a i{
+    font-size: 20px;
+}
+
+.button_status_1, .button_action_1{
+    background-color: #185519;
+}
+
+.button_status_2, .button_action_2{
+    background-color: #B8001F;
+}
+
+.status_list_order{
+    background-color: #185519;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 6px;
+    padding: 3px;
+}
+
+::-webkit-scrollbar{
+    height: 5px;
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+/*==================== PAGINATION TABLE ====================*/
+
+.pagination{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #347928;
+}
+
+.pagination div{
+    padding: 10px;
+    border: 2px solid #C0EBA6;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #347928;
+    color: #ffffff;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+
+/*==================== RESPONSIVE TABLE ====================*/
+
+@media screen and (max-width: 970px){
+    .table_header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .table_name{
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 690px){
+    .search_container{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .table_form{
+        width: 55%;
+    }
+
+    .search_button {
+        height: 40px;
+        width: 40px;
+    }
+}
