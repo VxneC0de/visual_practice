@@ -29,12 +29,12 @@
                         <label for="showDrop" class="mobile-item">Productos ▾</label>
                         
                         <ul class="drop-menu">
-                            <li><a href="#" class="menu_item">Empanadas</a></li>
-                            <li><a href="#" class="menu_item">Pastelitos</a></li>
-                            <li><a href="#" class="menu_item">Especiales</a></li>
-                            <li><a href="#" class="menu_item">Bebidas Frías</a></li>
-                            <li><a href="#" class="menu_item">Bollitos</a></li>
-                            <li><a href="#" class="menu_item">Hallacas</a></li>
+                            <li><a href="#promociones" class="menu_item">Promociones</a></li>
+                            <li><a href="#empanadas" class="menu_item">Empanadas</a></li>
+                            <li><a href="#pastelitos" class="menu_item">Pastelitos</a></li>
+                            <li><a href="#especiales" class="menu_item">Especiales</a></li>
+                            <li><a href="#bebidas" class="menu_item">Bebidas Frías</a></li>
+                            <li><a href="#otros" class="menu_item">Otros</a></li>
                         </ul>
                     </li>
                     
@@ -209,10 +209,38 @@
 
         </section>
 
-        <section class="section_container order_container">
+        <section class="section_container order_container" id="promociones">
 
-          <h3>TREAT YOURSELF</h3>
+          <h3>Darse un gusto</h3>
           <h2 class="section_header">ELIGE Y DISFRUTA</h2>
+
+          <p class="section_description">
+            PROMOCIONES
+          </p>
+
+          <div class="order_grid">
+
+            <div class="order_card">
+              <img src="./assets/order-2.png" alt="order">
+              <h4>Mechada</h4>
+              <h2>40bs</h2>
+
+              <button class="btn_hero_2">Agregar al carrito</button>
+            </div>
+
+            <div class="order_card">
+              <img src="./assets/order-3.png" alt="order">
+              <h4>Pollo</h4>
+              <h2>40bs</h2>
+
+              <button class="btn_hero_2">Agregar al carrito</button>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="section_container order_container" id="empanadas">
 
           <p class="section_description">
             EMPANADAS
@@ -240,7 +268,117 @@
 
         </section>
 
+        <section class="section_container order_container" id="pastelitos">
 
+          <p class="section_description">
+            PASTELITOS
+          </p>
+
+          <div class="order_grid">
+
+            <div class="order_card">
+              <img src="./assets/order-2.png" alt="order">
+              <h4>Mechada</h4>
+              <h2>40bs</h2>
+
+              <button class="btn_hero_2">Agregar al carrito</button>
+            </div>
+
+            <div class="order_card">
+              <img src="./assets/order-3.png" alt="order">
+              <h4>Pollo</h4>
+              <h2>40bs</h2>
+
+              <button class="btn_hero_2">Agregar al carrito</button>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="section_container order_container" id="especiales">
+
+          <p class="section_description">
+            ESPECIALES
+          </p>
+
+          <div class="order_grid">
+
+            <div class="order_card">
+              <img src="./assets/order-2.png" alt="order">
+              <h4>Mechada</h4>
+              <h2>40bs</h2>
+
+              <button class="btn_hero_2">Agregar al carrito</button>
+            </div>
+
+            <div class="order_card">
+              <img src="./assets/order-3.png" alt="order">
+              <h4>Pollo</h4>
+              <h2>40bs</h2>
+
+              <button class="btn_hero_2">Agregar al carrito</button>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="section_container order_container" id="bebidas">
+
+          <p class="section_description">
+            BEBIDAS FRÍAS
+          </p>
+
+          <div class="order_grid">
+
+            <div class="order_card">
+              <img src="./assets/order-2.png" alt="order">
+              <h4>Mechada</h4>
+              <h2>40bs</h2>
+
+              <button class="btn_hero_2">Agregar al carrito</button>
+            </div>
+
+            <div class="order_card">
+              <img src="./assets/order-3.png" alt="order">
+              <h4>Pollo</h4>
+              <h2>40bs</h2>
+
+              <button class="btn_hero_2">Agregar al carrito</button>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="section_container order_container" id="otros">
+
+          <p class="section_description">
+            OTROS
+          </p>
+
+          <div class="order_grid">
+
+            <div class="order_card">
+              <img src="./assets/order-2.png" alt="order">
+              <h4>Mechada</h4>
+              <h2>40bs</h2>
+
+              <button class="btn_hero_2">Agregar al carrito</button>
+            </div>
+
+            <div class="order_card">
+              <img src="./assets/order-3.png" alt="order">
+              <h4>Pollo</h4>
+              <h2>40bs</h2>
+
+              <button class="btn_hero_2">Agregar al carrito</button>
+            </div>
+
+          </div>
+
+        </section>
 
         <footer class="footer">
         
@@ -377,6 +515,19 @@
         interval: 500,
     });
 </script>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

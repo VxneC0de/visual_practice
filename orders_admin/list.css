@@ -167,22 +167,33 @@
     font-weight: bold;
 }
 
-.status_list{
+.status_list {
     display: flex;
     justify-content: space-between;
 }
 
-.status_list label{
+.status_list label {
     font-weight: bold;
 }
 
-.status_list span{
+.status_select {
     background-color: #185519;
     color: #ffffff;
     font-weight: 500;
     border-radius: 6px;
     padding: 3px;
+    border: none;
+    -webkit-appearance: none;  /* Para Safari */
+    -moz-appearance: none;     /* Para Firefox */
+    appearance: none;          /* Para otros navegadores */
+    cursor: pointer;
 }
+
+.status_select option {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 970px) {

@@ -1,0 +1,10 @@
+section{
+  padding: 70px 17%;
+}
+
+@media screen and (max-width: 970px){
+  .content{
+      flex: 1;
+      padding: 100px 20px 50px;
+  }
+}

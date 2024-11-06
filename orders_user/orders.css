@@ -6,6 +6,7 @@
 @import "./main.css";
 @import "./products_list.css";
 @import "./footer.css";
+@import "./list.css";
 
 :root {
     --white: #ffffff;
@@ -34,11 +35,7 @@ body{
     outline: none;
     scroll-behavior: smooth;
     background-color: var(--soft);
-    overflow: hidden;
-}
-
-html{
-    overflow-x: hidden;
+    
 }
 
 .container{
@@ -47,4 +44,6 @@ html{
     min-height: 100vh;
     margin: 0;
 }
+
+
 

@@ -11,7 +11,6 @@
 </head>
 <body>
 
-    <div class="container">
 
         <nav>
             <div class="wrapper_nav">
@@ -139,106 +138,82 @@
 
                 </div>
 
-                <div class="pagination">
-
-                    <div><i class='bx bx-chevrons-left'></i></div>
-                    <div><i class='bx bx-chevron-left'></i></div>
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div><i class='bx bx-chevron-right'></i></div>
-                    <div><i class='bx bx-chevrons-right'></i></div>
-                    
-                </div>
-
             </div>
 
-            <div class="show_order">
+        </section>
 
-              <div class="order_header">
-                  <h2>Informacion del pedido</h2>
+        <div class="modal_overlay"></div>
+
+        <section class="show_order">
+
+          <button class="close_show_order"><i class="fas fa-times"></i></button>
+
+          <div class="order_header">
+              <h2>Informacion del pedido</h2>
+          </div>
+          <div class="user_info">
+              <div class="name_field">
+                  <label for="name">Nombre:</label>
+                  <input type="text" id="name" value="John" readonly>
               </div>
-
-              <div class="order_details">
-                
-                <div class="user_info">
-
-                  <div class="name_field">
-                      <label for="name">Nombre:</label>
-                      <input type="text" id="name" value="John" readonly>
-                  </div>
-
-                  <div class="surname_field">
-                      <label for="surname">Apellido:</label>
-                      <input type="text" id="surname" value="Doe" readonly>
-                  </div>
-
-                  <div class="email_field">
-                      <label for="email">Correo Electronico:</label>
-                      <input type="email" id="email" value="john.doe@example.com" readonly>
-                  </div>
-
-                  <div class="cellphone_field">
-                      <label for="cellphone">Celular:</label>
-                      <input type="tel" id="cellphone" value="123-456-7890" readonly>
-                  </div>
-
-                </div>
-
-                  <div class="products">
-
-                    <div class="table_products_name">
-                      <h3>Productos</h3>
-                    </div>
-
-                    <div class="product_list">
-                      <table>
-                        <thead>
-                            <tr>
-                                <th>Nombre del producto</th>
-                                <th>Cantidad</th>
-                                <th>Monto total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Churros</td>
-                                <td>2</td>
-                                <td>$4,00</td>
-                            </tr>
-                            <!-- Agrega más filas según sea necesario -->
-                        </tbody>
-                    </table>
-                    </div>
-
-                  </div>
-
-                  <div class="payment_method">
-                      <label for="payment">Forma de Pago:</label>
-                      <span id="payment">Tarjeta de Crédito</span>
-                  </div>
-                  <div class="total_amount">
-                      <label for="total">Total:</label>
-                      <span id="total">$4,00</span>
-                  </div>
-                  <div class="order_time">
-                      <label for="date">Fecha del Pedido:</label>
-                      <input type="date" id="date">
-                      <label for="time">Hora del Pedido:</label>
-                      <input type="time" id="time">
-                  </div>
-                  <div class="status_list_order">
-                      <p>En Proceso.</p>
+              <div class="surname_field">
+                  <label for="surname">Apellido:</label>
+                  <input type="text" id="surname" value="Doe" readonly>
+              </div>
+              <div class="email_field">
+                  <label for="email">Correo Electronico:</label>
+                  <input type="email" id="email" value="john.doe@example.com" readonly>
+              </div>
+              <div class="cellphone_field">
+                  <label for="cellphone">Celular:</label>
+                  <input type="tel" id="cellphone" value="123-456-7890" readonly>
+              </div>
+          </div>
+          <div class="table_details">
+              <div class="table_header_list">
+                  <div class="table_name">
+                      <p>Productos</p>
                   </div>
               </div>
-              <button class="close_order">Cerrar</button>
+              <div class="table_section_list">
+                  <table>
+                      <thead>
+                          <th>Nombre del producto</th>
+                          <th>Cantidad</th>
+                          <th>Monto total</th>
+                      </thead>
+                      <tbody>
+                          <td>Churros</td>
+                          <td>2</td>
+                          <td>$4,00</td>
+                      </tbody>
+                  </table>
+              </div>
           </div>
           
-          
-          
-          
+          <div class="total_amount">
+              <label for="total">Total:</label>
+              <span id="total">$4,00</span>
+          </div>
 
+          <div class="payment_method">
+            <label for="payment">Forma de Pago:</label>
+            <span id="payment">Tarjeta de Crédito</span>
+        </div>
+
+          <div class="order_time">
+              <label for="date">Fecha del Pedido:</label>
+              <input type="date" id="date">
+              <label for="time">Hora del Pedido:</label>
+              <input type="time" id="time">
+          </div>
+          <div class="status_list">
+              <label for="status_pedido">Estatus del Pedido</label>
+              <span id="status_pedido">En Proceso.</span>
+          </div>
         </section>
+      
+      
 
         <footer class="footer">
         
@@ -256,7 +231,7 @@
       
         </footer>
 
-    </div>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -275,6 +250,19 @@
           
         });
       </script>
+
+      <script>
+        document.querySelector('.button_action_1').addEventListener('click', function() {
+            document.querySelector('.modal_overlay').style.display = 'block';
+            document.querySelector('.show_order').style.display = 'block';
+        });
+    
+        document.querySelector('.close_show_order').addEventListener('click', function() {
+            document.querySelector('.modal_overlay').style.display = 'none';
+            document.querySelector('.show_order').style.display = 'none';
+        });
+    </script>
+    
     
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
