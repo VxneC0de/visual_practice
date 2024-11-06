@@ -28,20 +28,7 @@
     line-height: 1.75rem;
 }
 
-.btn_hero_2{
-    padding: 1rem 1.5rem;
-    outline: none;
-    border: none;
-    font-size: 1rem;
-    color: var(--white);
-    background-color: var(--tertiary-color);
-    transition: 0.3s;
-    cursor: pointer;
-}
 
-.btn_hero_2:hover{
-    background-color: var(--primary-color);
-}
 
 .img_hero_2{
     display: flex;
@@ -134,17 +121,6 @@
     color: var(--white);
 }
 
-.order_container h3{
-    max-width: fit-content;
-    margin-inline: auto;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--primary-color);
-    background-color: var(--secondary_color);
-}
-
 /*======================== ORDER =================== */
 
 .order_container .section_header{
@@ -155,6 +131,12 @@
 .order_container .section_description{
     margin-bottom: 2rem;
     text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    background-color: var(--secondary_color);
+    text-align: center;
+    line-height: 3.75rem;
 }
 
 .order_grid{
@@ -176,28 +158,56 @@
 .order_card img{
     max-width: 150px;
     margin-inline: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.6));
 }
 
-.order_card h4{
+.order_container h3{
+    max-width: fit-content;
+    margin-inline: auto;
     margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    background-color: var(--secondary_color);
+}
+
+
+.order_card h4{
+    margin-bottom: 0.5rem;
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-dark);
 }
 
 .order_card p{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-weight: 500;
     color: var(--text-dark);
     line-height: 1.75rem;
 }
 
 .order_card h2{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-weight: 700;
     color: var(--text-dark);
+    font-size: 1.2rem;
+}
+
+.btn_hero_2{
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--tertiary-color);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn_hero_2:hover{
+    background-color: var(--primary-color);
 }
 
 /* =================== FOOTER ================= */
