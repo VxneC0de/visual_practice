@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opciones de Pago</title>
+    <link rel="stylesheet" href="./prueba.css">
+</head>
+<body>
+    <div class="payment-option" id="pago-movil">
+        <input type="radio" name="payment" id="radio-pago-movil">
+        <label for="radio-pago-movil">Pago Móvil</label>
+
+        <div class="details" id="details-movil">
+            <label for="referencia">Referencia:</label>
+            <input type="text" id="referencia">
+            <label for="imagen-referencia">Subir Imagen de Referencia:</label>
+            <input type="file" id="imagen-referencia">
+        </div>
+
+    </div>
+
+    <div class="payment-option" id="efectivo">
+        <input type="radio" name="payment" id="radio-efectivo">
+        <label for="radio-efectivo">Efectivo</label>
+
+        <div class="details" id="details-efectivo">
+            <label for="imagen-efectivo">Subir Imagen de los Billetes:</label>
+            <input type="file" id="imagen-efectivo">
+        </div>
+
+    </div>
+
+    <div class="payment-option" id="tarjeta">
+        <input type="radio" name="payment" id="radio-tarjeta">
+        <label for="radio-tarjeta">Tarjeta</label>
+        <div class="details" id="details-efectivo">
+            <p>Cancelar directamente en la tienda</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

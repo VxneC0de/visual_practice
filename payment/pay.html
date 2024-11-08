@@ -43,66 +43,11 @@
         </ul>
         
         <div class="header-right">
-
-            <div class="cart_icon">
-                <a href="#"><ion-icon name="cart"></ion-icon></a>
-                <span>0</span>
-            </div>
             
             <div class="user_icon">
                 <a href="#"><ion-icon name="person"></ion-icon></a>
             </div>
             
-        </div>
-
-        <div class="cart_sidebar">
-          
-          <button class="close_cart"><i class="fas fa-times"></i></button>
-          
-          <div class="cart_header">
-            <h2>Tu Pedido</h2>
-          </div>
-
-          <div class="cart_items">
-            
-            <div class="cart_item">
-
-              <div class="remove_item">
-                <span><i class='bx bx-trash'></i></span>
-              </div>
-
-              <div class="item_details">
-                <div class="item_details_title">
-                    <p>Empanada de Carne</p>
-                </div>
-
-                <div class="item_details_price">
-                    <strong>Bs. <span>35</span></strong> 
-                </div> 
-              </div>
-
-              <div class="qty">
-                <span>-</span>
-                <strong>1</strong>
-                <span>+</span>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="cart_actions">
-
-            <div class="subtotal">
-              <p>SUBTOTAL:</p>
-              <strong>Bs. <span>525</span></strong>
-              <strong>$. <span>10</span></strong>
-            </div>
-
-            <button class="clean_btn">VACIAR CARRITO</button>
-            <button class="checkout_btn">IR AL PAGO</button> <!-- Botón de pago -->
-          </div>
-          
         </div>
 
         <div class="user_sidebar">
@@ -163,117 +108,201 @@
 
 </nav>
 
-        <section class="hero">
+        <section class="section_container form_order">
 
-            <div class="hero_text">
-                <h2>#Coffee for hot days</h2>
-                <h1>- Cold Brew</h1>
-                <p>Boots your productivity and build your mood eith a glass of coffee in the morning. Coffee has a stimulating effect.</p>
+          <div class="payment_div">
 
-                <div class="main_hero">
-                    <a href="#" class="btn_hero">Order Now</a>
-                    <a href="#" class="price_hero">
-                        $16.00 | <span>Regular Price</span>
-                    </a>
-                </div>
+            <header>Orden</header>
 
-            </div>
+            <form action="#" class="form_payment">
 
-            <div class="hero_img">
-                <img src="./img/hero.png" alt="hero_img">
-            </div>
+              <div class="data">
 
-            <div class="icons_hero">
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-whatsapp'></i></a>
-            </div>
+                <h3>Mi contacto</h3>
 
-        </section>
-
-        <section class="section_container banner_container">
-
-          <form action="#" class="form-box">
-    
-            <div class="register-container" id="register">
-    
-                <div class="top">
-                    <header>PAGO</header>
-                </div>
-
-                <div class="warning">
-                  <p>Después de confirmar su pedido, no se podrá hacer un reembolso.</p>
-                </div>
-                
-                <div class="two-forms">
-
-                    <div class="form_name">
-                      <h4>MI CONTACTO</h4>
-                    </div>
-                    
-                    <div class="input-box">
-                      <label for="email">Dirección de correo electrónico <span>*</span></label>
-                        <input type="text" class="input-field" id="email">
-                        <p>El número de pedido y el recibo se enviarán a esta dirección de correo electrónico.</p>
-                        <i class='bx bxs-food-menu iconoOne'></i>
-                    </div>
-                    
-                    <div class="input-box">
-                      <label for="cellphone">Teléfono <span>*</span></label>
-                      <input type="text" class="input-field" id="cellphone">
-                      <i class='bx bxs-food-menu iconoOne'></i>
-                  </div>
-                    
+                <div class="input-box">
+                  <label>Nombre <span>*</span></label>
+                  <input type="text" required />
+                  <div class="error"></div>
                 </div>
 
                 <div class="input-box">
-                  
+                  <label>Apellido <span>*</span></label>
+                  <input type="text" required />
+                  <div class="error"></div>
+                </div>
+        
+                <div class="input-box">
+                  <label>Teléfono <span>*</span></label>
+                  <input type="text" required />
+                  <div class="error"></div>
+                </div>
+
               </div>
 
-                <div class="two-forms">
-                    
-                    <div class="input-box">
-                        <input type="text" class="input-field" placeholder="Precio">
-                        <i class='bx bxs-dollar-circle'></i>
-                    </div>
-                    
-                    <div class="input-box select">
-                        <select class="input-field select-custom">
-                            <option value="" disabled selected>Elegir Disponibilidad</option>
-                            <option value="1">Disponible</option>
-                            <option value="2">No Disponible</option>
-                        </select>
-                        <i class='bx bxs-category' ></i>
-                    </div>
-                    
+              <div class="data">
+
+                <h3>Método de envío</h3>
+
+                <div class="div_envio">
+                  <div class="envio">
+                    <input type="radio" name="payment" id="radio-pago-movil">
+                    <label for="radio-pago-movil">Pickup</label>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="data">
+
+                <h3>Punto de recogida</h3>
+
+                <div class="div_recogida">
+                  <p>Avenida Principal de Bello Campo, Residencias Bello Campo, Local 6, Caracas.
+                  Caracas
+                  Capital
+                  1063</p>
+                </div>
+
+              </div>
+
+              <div class="data">
+
+                <h3>Notas adicionales</h3>
+
+                <div class="input-box">
+                  <label>Notas del pedido (opcional)</label>
+                  <textarea name="" id="" maxlength="150"></textarea>
+                </div>
+
+                <h5>Seleccionar la hora de recogida</h5>
+
+                <div class="column">
+
+                  <div class="input-box">
+                    <label>Fecha <span>*</span></label>
+                    <select required>
+                        <option value="hoy">Hoy</option>
+                    </select>
+                    <div class="error"></div>
                 </div>
                 
                 <div class="input-box">
-                    <input type="date" class="input-field" placeholder="Fecha">
-                    <i class='bx bxs-calendar'></i>
+                    <label>Tiempo <span>*</span></label>
+                    <select required>
+                        <option value="asap">Tan pronto como sea posible</option>
+                        <option value="7-730">7:00 - 7:30</option>
+                        <option value="730-8">7:30 - 8:00</option>
+                        <option value="8-830">8:00 - 8:30</option>
+                        <option value="830-9">8:30 - 9:00</option>
+                        <option value="9-930">9:00 - 9:30</option>
+                        <option value="930-10">9:30 - 10:00</option>
+                        <option value="10-1030">10:00 - 10:30</option>
+                        <option value="1030-11">10:30 - 11:00</option>
+                        <option value="11-1130">11:00 - 11:30</option>
+                        <option value="1130-12">11:30 - 12:00</option>
+                        <option value="1230-13">12:30 - 13:00</option>
+                    </select>
+                    <div class="error"></div>
                 </div>
-    
-                <div class="input-box">
-                    <input type="time" class="input-field" placeholder="Hora">
-                    <i class='bx bxs-time'></i>
+                
+        
                 </div>
 
-                <div class="input-box img_box">
-                    <input type="file" class="input-field">
-                    <label for="file-upload"></label>
-                    <i class='bx bxs-image-alt'></i>
+              </div>
+
+              <div class="data">
+
+                <h3>Modo de Pago</h3>
+
+                <div class="metodos">
+
+                <div class="payment-option" id="pago-movil">
+                    <input type="radio" name="payment" id="radio-pago-movil">
+                    <label for="radio-pago-movil">Pago Móvil</label>
+            
+                    <div class="details" id="details-movil">
+
+                        <div class="input-box">
+                          <label for="referencia">Ultimos 4 números de la referencia:</label>
+                          <input type="text" id="referencia">
+                          <div class="error"></div>
+                        </div>
+
+                        <div class="input-box">
+                          <label for="referencia">Número de telefono donde de hizo el pago:</label>
+                          <input type="text" id="referencia">
+                          <div class="error"></div>
+                        </div>
+
+                        <div class="input-box">
+                          <input type="file" id="file" accept="image/*" hidden>
+
+                          <div class="img-area" data-img="">
+                            <i class='bx bxs-cloud-upload icon'></i>
+                            <h3>Captura del pago</h3>
+                            <p>Image size must be less than <span>2MB</span></p>
+                          </div>
+
+                          <button class="select-image">Seleccionar imagen</button>
+                          <div class="error"></div>
+
+                        </div>
+                      
+                    </div>
+            
+                </div>
+            
+                <div class="payment-option" id="efectivo">
+                    <input type="radio" name="payment" id="radio-efectivo">
+                    <label for="radio-efectivo">Efectivo</label>
+            
+                    <div class="details" id="details-efectivo">
+
+                      <div class="input-box">
+                        <input type="file" id="file" accept="image/*" hidden>
+  
+                        <div class="img-area" data-img="">
+                          <i class='bx bxs-cloud-upload icon'></i>
+                          <h3>Captura del pago</h3>
+                          <p>Image size must be less than <span>2MB</span></p>
+                        </div>
+  
+                        <button class="select-image">Seleccionar imagen</button>
+                        <div class="error"></div>
+  
+                      </div>
+                      
+                    </div>
+            
+                </div>
+            
+                <div class="payment-option" id="tarjeta">
+                    <input type="radio" name="payment" id="radio-tarjeta">
+                    <label for="radio-tarjeta">Tarjeta</label>
+
+                    <div class="details" id="details-efectivo">
+
+                      <div class="input-box">
+                        <p>Pagar directamente en caja al retirar el pedido</p>
+                      </div>
+
+                    </div>
                 </div>
 
-                <div class="input-box">
-                    <textarea class="textarea-field" placeholder="Descripción" maxlength="150"></textarea>
-                    <i class='bx bxs-comment-detail textarea-icon'></i>
-                </div>                
-    
-                <div class="input-box">
-                    <input type="submit" class="submit" value="Subir">
                 </div>
-    
-            </div>
-        </form>
+
+              </div>
+
+              <div class="input-box">
+                <input type="submit" class="submit" value=" Confirmar el pedido">
+              </div>
+
+            </form>
+
+          </div>
+
+          <div class="cart_div"></div>
 
         </section>
 
@@ -311,34 +340,6 @@
             userSidebar.style.right = '-100%';
           });
           
-        });
-      </script>
-  
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const cartIcon = document.querySelector('.cart_icon a');
-          const cartSidebar = document.querySelector('.cart_sidebar');
-          const closeCart = document.querySelector('.close_cart');
-      
-          cartIcon.addEventListener('click', function(event) {
-            event.preventDefault();
-            cartSidebar.style.right = '0';
-          });
-      
-          closeCart.addEventListener('click', function() {
-            cartSidebar.style.right = '-100%';
-          });
-          
-          // Función para agregar un producto a la lista
-          /*function addToCart(itemName) {
-            const cartItems = document.querySelector('.cart-items');
-            const newItem = document.createElement('li');
-            newItem.textContent = itemName;
-            cartItems.appendChild(newItem);
-          }
-          
-          // Ejemplo de agregar un producto
-          addToCart('Empanada de Carne');*/
         });
       </script>
     
