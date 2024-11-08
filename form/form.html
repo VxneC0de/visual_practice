@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--<title>Registration Form in HTML CSS</title>-->
+    <!---Custom CSS File--->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./form.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header>Registration Form</header>
+      <form action="#" class="form">
+        <div class="input-box">
+          <label>Full Name <span>*</span></label>
+          <input type="text" placeholder="Enter full name" required />
+          <div class="error">La contraseña debe tener al menos un signo especial.</div>
+        </div>
+
+        <div class="input-box">
+          <label>Email Address <span>*</span></label>
+          <input type="text" placeholder="Enter email address" required />
+          <div class="error">La contraseña debe tener al menos un signo especial.</div>
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Phone Number</label>
+            <input type="number" placeholder="Enter phone number" required />
+            <div class="error">La contraseña debe tener al menos un signo especial.</div>
+          </div>
+          <div class="input-box">
+            <label>Birth Date</label>
+            <input type="date" placeholder="Enter birth date" required />
+            <div class="error">La contraseña debe tener al menos un signo especial.</div>
+          </div>
+        </div>
+        <div class="gender-box">
+          <h3>Gender</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="gender" checked />
+              <label for="check-male">male</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-female" name="gender" />
+              <label for="check-female">Female</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-other" name="gender" />
+              <label for="check-other">prefer not to say</label>
+            </div>
+          </div>
+        </div>
+        <div class="input-box address">
+          <label>Address</label>
+          <input type="text" placeholder="Enter street address" required />
+          <input type="text" placeholder="Enter street address line 2" required />
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>Country</option>
+                <option>America</option>
+                <option>Japan</option>
+                <option>India</option>
+                <option>Nepal</option>
+              </select>
+            </div>
+            <input type="text" placeholder="Enter your city" required />
+          </div>
+          <div class="column">
+            <input type="text" placeholder="Enter your region" required />
+            <input type="number" placeholder="Enter postal code" required />
+          </div>
+        </div>
+        <button>Submit</button>
+      </form>
+    </section>
+
+    
+
+    <div class="container_3">
+        <div class="input-box">
+            <label>Ultimos 4 números de la referencia <span>*</span></label>
+            <input type="text" required />
+          </div>
+  
+          <div class="input-box">
+            <label>Numero de telefono donde de hizo el pago <span>*</span></label>
+            <input type="text"required />
+          </div>
+
+          <div class="container_2">
+            <input type="file" id="file" accept="image/*" hidden>
+            <div class="img-area" data-img="">
+                <i class='bx bxs-cloud-upload icon'></i>
+                <h3>Captura del pago</h3>
+                <p>Image size must be less than <span>2MB</span></p>
+            </div>
+            <button class="select-image">Select Image</button>
+        </div>
+    </div>
+	
+	<script>
+
+        const selectImage = document.querySelector('.select-image');
+const inputFile = document.querySelector('#file');
+const imgArea = document.querySelector('.img-area');
+
+selectImage.addEventListener('click', function () {
+	inputFile.click();
+})
+
+inputFile.addEventListener('change', function () {
+	const image = this.files[0]
+	if(image.size < 2000000) {
+		const reader = new FileReader();
+		reader.onload = ()=> {
+			const allImg = imgArea.querySelectorAll('img');
+			allImg.forEach(item=> item.remove());
+			const imgUrl = reader.result;
+			const img = document.createElement('img');
+			img.src = imgUrl;
+			imgArea.appendChild(img);
+			imgArea.classList.add('active');
+			imgArea.dataset.img = image.name;
+		}
+		reader.readAsDataURL(image);
+	} else {
+		alert("Image size more than 2MB");
+	}
+})
+    
+    </script>
+
+  </body>
+</html>
