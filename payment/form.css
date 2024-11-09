@@ -13,13 +13,91 @@
   max-width: 520px;
   width: 100%;
   background: #fff;
-  padding: 25px;
   border-radius: 5px;
   border: 1px solid green;
 }
 
+.payment_div header{
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+  border-bottom: 1px solid green;
+  text-transform: uppercase;
+  padding: 8px;
+}
 
-/*CART*/
+.payment_div .data{
+  border-bottom: 1px solid green;
+  padding: 25px;
+}
+
+.data h3{
+  color: #333;
+  text-transform: uppercase;
+}
+
+.input-box {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box label {
+  color: #333;
+}
+
+.input-box label span {
+  color: #dd1335;
+}
+
+
+.form_payment .data :where(.input-box input, .select-box, .input-box select) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+
+.input-box input:focus,
+.input-box select:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.input-box textarea{
+  position: relative;
+  text-align: justify;
+  resize: none;
+  outline: none;
+  transition: .2s ease;
+  height: 100px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 8px;
+  padding: 0 15px;
+  font-size: 1rem;
+  color: #707070;
+}
+
+.input-box textarea:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.div_envio{
+  width: 100%;
+  margin-top: 20px;
+}
+
+/*CART - ORDER*/
 
 .cart_div{
 }
