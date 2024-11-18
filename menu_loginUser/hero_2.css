@@ -16,10 +16,10 @@
 .section_header{
     font-size: 3rem;
     font-weight: 500;
-    color: var(--primary-color);
+    color: #42200b;
     text-align: center;
     line-height: 3.75rem;
-    text-shadow: 2px 2px var(--secondary_color);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.589);
 }
 
 .section_description{
@@ -59,18 +59,18 @@
     padding: 1rem 2rem;
     font-size: 1.75rem;
     font-weight: 400;
-    color: var(--primary-color);
-    border: 2px dashed var(--primary-color);
+    color: #347928;
+    border: 2px dashed #347928;
     text-align: center;
 }
 
 .header_content h1{
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     font-weight: 500;
-    color: var(--primary-color);
+    color: #42200b;
     line-height: 3.5rem;
     text-align: center;
-    text-shadow: 2px 2px var(--white);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.589);
 }
 
 .header_content h1 span{
@@ -133,8 +133,8 @@
     text-align: center;
     font-size: 2rem;
     font-weight: 500;
-    color: var(--primary-color);
-    background-color: var(--secondary_color);
+    color: #347928;
+    border: 2px dashed #347928;
     text-align: center;
     line-height: 3.75rem;
 }
@@ -159,7 +159,7 @@
     max-width: 150px;
     margin-inline: auto;
     margin-bottom: 1rem;
-    filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.6));
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
 }
 
 .order_container h3{
@@ -169,8 +169,9 @@
     padding: 0.5rem;
     font-size: 1.5rem;
     font-weight: 400;
-    color: var(--primary-color);
-    background-color: var(--secondary_color);
+    color: #347928;
+    border: 2px dashed #347928;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.589);
 }
 
 
@@ -200,8 +201,9 @@
     outline: none;
     border: none;
     font-size: 0.9rem;
+    font-weight: 500;
     color: var(--white);
-    background-color: var(--tertiary-color);
+    background-color: #347928;
     transition: 0.3s;
     cursor: pointer;
 }
@@ -318,6 +320,7 @@
 
     .header_content h1{
         text-align: left;
+        font-size: 2.5rem
     }
 
     .banner_container{
@@ -354,5 +357,9 @@
 
     .order_grid{
         gap: 2rem;
+    }
+
+    .header_content h1{
+        font-size: 3.5rem;
     }
 }
