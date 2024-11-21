@@ -95,5 +95,37 @@
 	transition: all .3s ease;
 }
 .select-image:hover {
-	background: var(--dark-blue);
+	background: #347928;
+}
+
+@media only screen and (max-width: 540px){
+
+    .img-area {
+        height: 120px;
+    }
+
+    .input-box_2 {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .img-area h3 {
+        font-size: 15px;
+    }
+    .img-area p {
+        font-size: 13px;
+    }
+
+    .img-area {
+        height: 120px;
+    }
+
+    .input-box_2 {
+        padding: 20px;
+    }
+
+    .select-image {
+        font-size: 13px;
+    }
 }
