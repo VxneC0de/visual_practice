@@ -114,12 +114,18 @@
                         <input type="time" class="input-field" placeholder="Hora">
                         <i class='bx bxs-time'></i>
                     </div>
-    
-                    <div class="input-box img_box">
-                        <input type="file" class="input-field">
-                        <label for="file-upload"></label>
-                        <i class='bx bxs-image-alt'></i>
+
+                    <div class="input-box_2 ">
+                        <input type="file" id="file" accept="image/*" hidden>
+                        <div class="img-area" data-img="">
+                            <i class='bx bxs-image-alt icon'></i>
+                            <h3>Imagen</h3>
+                            <p>La imagen debe ser inferior a <span>2MB</span></p>
+                        </div>
+                        <button class="select-image">Elegir imagen</button>
                     </div>
+
+                    
     
                     <div class="input-box">
                         <textarea class="textarea-field" placeholder="Descripción" maxlength="150"></textarea>
@@ -152,6 +158,38 @@
         </footer>
 
     </div>
+
+    <script>
+
+        const selectImage = document.querySelector('.select-image');
+const inputFile = document.querySelector('#file');
+const imgArea = document.querySelector('.img-area');
+
+selectImage.addEventListener('click', function () {
+	inputFile.click();
+})
+
+inputFile.addEventListener('change', function () {
+	const image = this.files[0]
+	if(image.size < 2000000) {
+		const reader = new FileReader();
+		reader.onload = ()=> {
+			const allImg = imgArea.querySelectorAll('img');
+			allImg.forEach(item=> item.remove());
+			const imgUrl = reader.result;
+			const img = document.createElement('img');
+			img.src = imgUrl;
+			imgArea.appendChild(img);
+			imgArea.classList.add('active');
+			imgArea.dataset.img = image.name;
+		}
+		reader.readAsDataURL(image);
+	} else {
+		alert("Image size more than 2MB");
+	}
+})
+    
+    </script>
     
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
