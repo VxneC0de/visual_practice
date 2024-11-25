@@ -51,20 +51,7 @@
   flex: 1;
 }
 
-.cart_item {
-  background: #ffffff;
-  box-shadow: 0px 2px 5px #24252694;
-  color: #242526;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  min-height: 60px; /* Reducido para hacer el contenedor más horizontal */
-  position: relative;
-  font-size: 15px;
-}
+
 
 .cart_item .remove_item {
   width: 30px;
