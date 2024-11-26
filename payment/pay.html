@@ -43,10 +43,11 @@
         </ul>
         
         <div class="header-right">
-            
-            <div class="user_icon">
-                <a href="#"><ion-icon name="person"></ion-icon></a>
-            </div>
+
+          <div class="cart_icon">
+            <a href="#"><ion-icon name="cart"></ion-icon></a>
+            <span>1020bs</span>
+        </div>
             
         </div>
 
@@ -308,106 +309,170 @@
 
           </div>
 
-          <div class="cart_div">
-
-            <button class="close_cart"><i class="fas fa-times"></i></button>
-
-            <header>RESUMEN DEL PEDIDO</header>
-
-            <form action="#" class="form_cart">
-
-              <div class="cart_items">
-
-                <div class="cart_item">
-
-                  <div class="item_details">
-
-                    <div class="details">
-
-                      <p>Promoción</p>
-                      <div class="item_price_individual">45Bs</div>
-
-                    </div>
-
-                    <div class="quantity">
-
-                      <button>-</button>
-                      <input type="text" value="1">
-                      <button>+</button>
-
-                      <a href="#">Eliminar artículo</a>
-
-                    </div>
-                    
-                  </div>
-
-                  <div class="total">
-                    <div class="item_price_complete">$11,99</div>
-                  </div>
-
-                </div>
-
-                <div class="cart_item">
-
-                  <div class="item_details">
-
-                    <div class="details">
-
-                      <p>Promoción</p>
-                      <div class="item_price_individual">45Bs</div>
-
-                    </div>
-
-                    <div class="quantity">
-
-                      <button>-</button>
-                      <input type="text" value="1">
-                      <button>+</button>
-
-                      <a href="#">Eliminar artículo</a>
-
-                    </div>
-                    
-                  </div>
-
-                  <div class="total">
-                    <div class="item_price_complete">$11,99</div>
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="cart_total">
-
-                <div>
-                  <span>Subtotal</span>
-                  <span>$11,99</span>
-              </div>
-  
-              <div>
-                  <span>Envío</span>
-                  <span>--</span>
-              </div>
-  
-              <div>
-                  <span>TOTAL</span>
-                  <span>$11,99</span>
-              </div>
-
-              </div>
-
-            </form>
-
-          </div>
-
-            
-
-              
-        
-          </div>
-        
         </section>
+
+        <div class="header-right_cart">
+          
+      </div>
+      
+      <div class="modal_overlay"></div>
+  
+      <section class="show_cart">
+  
+          <div class="cart_div">
+              
+              <div class="cart_header">
+                <h2>RESUMEN DEL PEDIDO</h2>
+              </div>
+      
+              <div class="cart_container">
+      
+                  <form action="#" class="cart_items">
+                  
+                      <div class="cart_item">
+          
+                          <div class="cart_right">
+          
+                              <div class="item_details">
+                                  <div class="item_details_title">
+                                      <p>Empanada de Carne</p>
+                                  </div>
+              
+                                  <div class="item_details_price">
+                                      <strong>Bs. <span>35</span></strong> 
+                                  </div> 
+                              </div>
+          
+                              <div class="quantity">
+                                  <div class="quantity_control">
+                                      <button class="decrement">-</button>
+                                      <input type="text" id="productQuantity" value="1" readonly>
+                                      <button class="increment">+</button>
+                                  </div>
+                                </div>
+          
+                              <div class="remove_item">
+                                  <a><i class='bx bx-trash'></i></a>
+                              </div>
+          
+                          </div>
+          
+                          <div class="cart_left">
+          
+                              <div class="total">
+                                  <div class="item_price_complete">$11,99</div>
+                              </div>
+          
+                          </div>
+          
+                      </div>
+                      
+                      <div class="cart_item">
+          
+                          <div class="cart_right">
+          
+                              <div class="item_details">
+                                  <div class="item_details_title">
+                                      <p>Empanada de Carne</p>
+                                  </div>
+              
+                                  <div class="item_details_price">
+                                      <strong>Bs. <span>35</span></strong> 
+                                  </div> 
+                              </div>
+          
+                              <div class="quantity">
+                                  <div class="quantity_control">
+                                      <button class="decrement">-</button>
+                                      <input type="text" id="productQuantity" value="1" readonly>
+                                      <button class="increment">+</button>
+                                  </div>
+                                </div>
+          
+                              <div class="remove_item">
+                                  <a><i class='bx bx-trash'></i></a>
+                              </div>
+          
+                          </div>
+          
+                          <div class="cart_left">
+          
+                              <div class="total">
+                                  <div class="item_price_complete">$11,99</div>
+                              </div>
+          
+                          </div>
+          
+                      </div>
+  
+                      <div class="cart_item">
+          
+                          <div class="cart_right">
+          
+                              <div class="item_details">
+                                  <div class="item_details_title">
+                                      <p>Empanada de Carne</p>
+                                  </div>
+              
+                                  <div class="item_details_price">
+                                      <strong>Bs. <span>35</span></strong> 
+                                  </div> 
+                              </div>
+          
+                              <div class="quantity">
+                                  <div class="quantity_control">
+                                      <button class="decrement">-</button>
+                                      <input type="text" id="productQuantity" value="1" readonly>
+                                      <button class="increment">+</button>
+                                  </div>
+                                </div>
+          
+                              <div class="remove_item">
+                                  <a><i class='bx bx-trash'></i></a>
+                              </div>
+          
+                          </div>
+          
+                          <div class="cart_left">
+          
+                              <div class="total">
+                                  <div class="item_price_complete">$11,99</div>
+                              </div>
+          
+                          </div>
+          
+                      </div>
+          
+                  </form>
+          
+                  <div class="cart_total">
+                      
+                      <div class="total_data">
+                          <span>Subtotal</span>
+                          <span>$11,99</span>
+                      </div>
+            
+                      <div class="total_data">
+                          <span>Envío</span>
+                          <span>--</span>
+                      </div>
+            
+                      <div class="total_data">
+                          <span>TOTAL</span>
+                          <span>$11,99</span>
+                      </div>
+          
+                  </div>
+  
+                  <div class="cart_close">
+                      <button class="close">Cerrar</button>
+                  </div>
+      
+              </div>
+              
+          </div>
+  
+      </section>
 
         <footer class="footer">
         
