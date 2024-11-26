@@ -125,4 +125,10 @@
     .select-image {
         font-size: 13px;
     }
+
+    .img-area_2 p {
+        font-size: 13px;
+        font-weight: 600;
+        color: #ffffff;
+      }
 }

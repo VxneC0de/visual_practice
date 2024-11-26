@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="./pay.css">
     <title>Sing In</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <style>
+      .details_movil, .details_efectivo, .details_tarjeta {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+  </style>
+
 </head>
 <body>
 
@@ -223,80 +232,68 @@
                 <h3 class="title_form">Modo de Pago</h3>
 
                 <div class="metodos">
-
-                <div class="payment-option" id="pago-movil">
-                    <input type="radio" name="payment" id="radio-pago-movil">
-                    <label for="radio-pago-movil">Pago Móvil</label>
-            
-                    <div class="details" id="details-movil">
-
-                        <div class="input-box">
-                          <label for="referencia">Ultimos 4 números de la referencia:</label>
-                          <input type="text" id="referencia">
-                          <div class="error"></div>
-                        </div>
-
-                        <div class="input-box">
-                          <label for="referencia">Número de telefono donde de hizo el pago:</label>
-                          <input type="text" id="referencia">
-                          <div class="error"></div>
-                        </div>
-
-                        <div class="input-box_2">
-                          <input type="file" id="file" accept="image/*" hidden>
-                          <div class="img-area" data-img="">
-                              <i class='bx bxs-image-alt icon'></i>
-                              <h3 class="title_area">Captura del pago</h3>
-                              <p>La imagen debe ser inferior a <span>2MB</span></p>
+                  <div class="payment-option" id="pago-movil">
+                      <input type="radio" name="payment" id="radio-pago-movil">
+                      <label for="radio-pago-movil">Pago Móvil</label>
+                      <div class="details_movil" id="details-movil">
+                          <!-- Detalles de Pago Móvil -->
+                          <div class="input-box">
+                              <label for="referencia-movil">Ultimos 4 números de la referencia:</label>
+                              <input type="text" id="referencia-movil">
+                              <div class="error"></div>
                           </div>
-                          <div class="select-image" id="select-image"> 
-                              <p>Subir Captura</p> 
+                          <div class="input-box">
+                              <label for="telefono-movil">Número de telefono donde se hizo el pago:</label>
+                              <input type="text" id="telefono-movil">
+                              <div class="error"></div>
+                          </div>
+                          <div class="input-box_2">
+                              <input type="file" id="file-movil" accept="image/*" hidden>
+                              <div class="img-area" data-img="">
+                                  <i class='bx bxs-image-alt icon'></i>
+                                  <h3 class="title_area">Captura del pago</h3>
+                                  <p>La imagen debe ser inferior a <span>2MB</span></p>
+                              </div>
+                              <div class="select-image" id="select-image-movil"> 
+                                  <p>Subir Captura</p> 
+                              </div>
+                          </div>
+                          <div id="imageError-movil" class="error_2"></div>
+                      </div>
+                  </div>
+          
+                  <div class="payment-option" id="efectivo">
+                      <input type="radio" name="payment" id="radio-efectivo">
+                      <label for="radio-efectivo">Efectivo</label>
+                      <div class="details_efectivo" id="details-efectivo">
+                          <!-- Detalles de Efectivo -->
+                          <div class="input-box_2">
+                              <input type="file" id="file-efectivo" accept="image/*" hidden>
+                              <div class="img-area" data-img="">
+                                  <i class='bx bxs-image-alt icon'></i>
+                                  <h3 class="title_area">Captura del pago</h3>
+                                  <p>La imagen debe ser inferior a <span>2MB</span></p>
+                              </div>
+                              <div class="select-image" id="select-image-efectivo"> 
+                                  <p>Subir Captura</p> 
+                              </div>
+                          </div>
+                          <div id="imageError-efectivo" class="error_2"></div>
+                      </div>
+                  </div>
+          
+                  <div class="payment-option" id="tarjeta">
+                      <input type="radio" name="payment" id="radio-tarjeta">
+                      <label for="radio-tarjeta">Tarjeta</label>
+                      <div class="details_tarjeta" id="details-tarjeta">
+                          <!-- Detalles de Tarjeta -->
+                          <div class="input-box_2 img_edit">
+                              <div class="img-area_2">
+                                  <p>Pagar directamente en caja al retirar el pedido</p>
+                              </div>
                           </div>
                       </div>
-                      <div id="imageError" class="error_2"></div>
-                      
-                    </div>
-            
-                </div>
-            
-                <div class="payment-option" id="efectivo">
-                    <input type="radio" name="payment" id="radio-efectivo">
-                    <label for="radio-efectivo">Efectivo</label>
-            
-                    <div class="details" id="details-efectivo">
-
-                      <div class="input-box_2">
-                        <input type="file" id="file" accept="image/*" hidden>
-                        <div class="img-area" data-img="">
-                            <i class='bx bxs-image-alt icon'></i>
-                            <h3 class="title_area">Captura del pago</h3>
-                            <p>La imagen debe ser inferior a <span>2MB</span></p>
-                        </div>
-                        <div class="select-image" id="select-image"> 
-                            <p>Subir Captura</p> 
-                        </div>
-                    </div>
-                    <div id="imageError" class="error_2"></div>
-                      
-                    </div>
-            
-                </div>
-            
-                <div class="payment-option" id="tarjeta">
-                    <input type="radio" name="payment" id="radio-tarjeta">
-                    <label for="radio-tarjeta">Tarjeta</label>
-
-                    <div class="details" id="details-efectivo">
-
-                      <div class="input-box_2 img_edit">
-                        <div class="img-area_2">
-                            <p>Pagar directamente en caja al retirar el pedido</p>
-                        </div>
-                      </div>
-
-                    </div>
-                </div>
-
+                  </div>
                 </div>
 
               </div>
@@ -310,10 +307,6 @@
           </div>
 
         </section>
-
-        <div class="header-right_cart">
-          
-      </div>
       
       <div class="modal_overlay"></div>
   
@@ -493,31 +486,53 @@
 
 
     
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const userIcon = document.querySelector('.user_icon a');
-          const userSidebar = document.querySelector('.user_sidebar');
-          const closeuser = document.querySelector('.close_user');
-      
-          userIcon.addEventListener('click', function(event) {
-            event.preventDefault();
-            userSidebar.style.right = '0';
-          });
-      
-          closeuser.addEventListener('click', function() {
-            userSidebar.style.right = '-100%';
-          });
-          
-        });
-      </script>
-    
       <script>
-        document.querySelectorAll('.menu_item').forEach(item => {
-            item.addEventListener('click', () => {
-                document.getElementById('menu-btn').checked = false;
-            });
+        // Mostrar carrito y fondo de superposición al hacer clic en el icono del carrito
+        document.querySelector('.cart_icon').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.modal_overlay').style.display = 'block';
+            document.querySelector('.show_cart').style.display = 'flex';
+        });
+    
+        // Cerrar carrito y fondo de superposición al hacer clic en el botón de cerrar
+        document.querySelector('.close').addEventListener('click', function() {
+            document.querySelector('.modal_overlay').style.display = 'none';
+            document.querySelector('.show_cart').style.display = 'none';
+        });
+    
+        // Cerrar el carrito al hacer clic fuera del área del carrito
+        document.querySelector('.modal_overlay').addEventListener('click', function() {
+            document.querySelector('.modal_overlay').style.display = 'none';
+            document.querySelector('.show_cart').style.display = 'none';
         });
     </script>
+
+    <script>
+      document.querySelector('#radio-pago-movil').addEventListener('click', function() {
+          hideAllDetails();
+          document.querySelector('#details-movil').style.display = 'flex';
+          console.log('Pago Móvil seleccionado');
+      });
+
+      document.querySelector('#radio-efectivo').addEventListener('click', function() {
+          hideAllDetails();
+          document.querySelector('#details-efectivo').style.display = 'flex';
+          console.log('Efectivo seleccionado');
+      });
+
+      document.querySelector('#radio-tarjeta').addEventListener('click', function() {
+          hideAllDetails();
+          document.querySelector('#details-tarjeta').style.display = 'flex';
+          console.log('Tarjeta seleccionada');
+      });
+
+      function hideAllDetails() {
+          document.querySelectorAll('.details').forEach(detail => {
+              detail.style.display = 'none';
+          });
+      }
+  </script>
+
 
     <script>
 
