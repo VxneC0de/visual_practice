@@ -191,12 +191,10 @@
     align-items: center;
 }
 
-
 .cart_item .remove_item:hover{
   background: #347928;
   color: #ffffff;
 }
-
 
 .cart_total{
   border-bottom: 1px solid #347928;
