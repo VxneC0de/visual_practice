@@ -43,7 +43,6 @@
     color: #d32f2f;
 }
 
-/* Fondo blur */
 .modal_overlay {
     position: fixed;
     top: 0;
@@ -56,7 +55,6 @@
     display: none; /* Inicialmente oculto */
 }
 
-/* Resto del CSS sigue igual */
 .user_info {
     display: flex;
     flex-direction: column;
@@ -195,7 +193,6 @@
 }
 
 
-/* Media Queries for Responsive Design */
 @media screen and (max-width: 970px) {
     .show_order {
         width: 90%;
