@@ -158,81 +158,113 @@
 
         <section class="show_order">
 
-          <button class="close_show_order"><i class="fas fa-times"></i></button>
-
-          <div class="order_header">
-              <h2>Informacion del pedido</h2>
-          </div>
-          <div class="user_info">
-              <div class="name_field">
-                  <label for="name">Nombre:</label>
-                  <input type="text" id="name" value="John" readonly>
-              </div>
-              <div class="surname_field">
-                  <label for="surname">Apellido:</label>
-                  <input type="text" id="surname" value="Doe" readonly>
-              </div>
-              <div class="email_field">
-                  <label for="email">Correo Electronico:</label>
-                  <input type="email" id="email" value="john.doe@example.com" readonly>
-              </div>
-              <div class="cellphone_field">
-                  <label for="cellphone">Celular:</label>
-                  <input type="tel" id="cellphone" value="123-456-7890" readonly>
-              </div>
-          </div>
-          <div class="table_details">
-              <div class="table_header_list">
-                  <div class="table_name">
-                      <p>Productos</p>
-                  </div>
-              </div>
-              <div class="table_section_list">
-                  <table>
-                      <thead>
-                          <th>Nombre del producto</th>
-                          <th>Cantidad</th>
-                          <th>Monto total</th>
-                      </thead>
-                      <tbody>
-                          <td>Churros</td>
-                          <td>2</td>
-                          <td>$4,00</td>
-                      </tbody>
-                  </table>
-              </div>
-          </div>
+            <button class="close_show_order"><i class="fas fa-times"></i></button>
           
-          <div class="total_amount">
-              <label for="total">Total:</label>
-              <span id="total">$4,00</span>
-          </div>
+            <div class="order_header">
+                <h2>Informacion del pedido</h2>
+            </div>
+            <div class="user_info">
+                <div class="name_field">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" value="John" readonly>
+                </div>
+                <div class="surname_field">
+                    <label for="surname">Apellido:</label>
+                    <input type="text" id="surname" value="Doe" readonly>
+                </div>
+                <div class="email_field">
+                    <label for="email">Correo Electronico:</label>
+                    <input type="email" id="email" value="john.doe@example.com" readonly>
+                </div>
+                <div class="cellphone_field">
+                    <label for="cellphone">Celular:</label>
+                    <input type="tel" id="cellphone" value="123-456-7890" readonly>
+                </div>
+            </div>
+            <div class="table_details">
+                <div class="table_header_list">
+                    <div class="table_name">
+                        <p>Productos</p>
+                    </div>
+                </div>
+                <div class="table_section_list">
+                    <table>
+                        <thead>
+                            <th>Nombre del producto</th>
+                            <th>Cantidad</th>
+                            <th>Monto total</th>
+                        </thead>
+                        <tbody>
+                            <td>Churros</td>
+                            <td>2</td>
+                            <td>$4,00</td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="total_amount">
+                <label for="total">Total:</label>
+                <span id="total">$4,00</span>
+            </div>
+          
+            <div class="payment_method">
+              <label for="payment">Forma de Pago:</label>
+              <span id="payment">Tarjeta de Crédito</span>
+            </div>
+          
+            <!-- Nuevo div con ícono -->
+            <div class="view_capture">
+                <label for="capture">Datos del Pago:</label>
+                <span><i class='bx bx-image'></i></span>
+              <span></span>
+            </div>
+          
+            <div class="order_time">
+                <label for="date">Fecha del Pedido:</label>
+                <input type="date" id="date">
+                <label for="time">Hora del Pedido:</label>
+                <input type="time" id="time">
+            </div>
+            <div class="status_list">
+              <label for="status_pedido">Estatus del Pedido</label>
+              <select id="status_pedido" class="status_select">
+                  <option value="confirmacion">Confirmación</option>
+                  <option value="en_proceso">En Proceso</option>
+                  <option value="listo">Listo</option>
+                  <option value="entregado">Entregado</option>
+              </select>
+            </div>
+            
+          </section>
+          
+          <section class="show_data">
 
-          <div class="payment_method">
-            <label for="payment">Forma de Pago:</label>
-            <span id="payment">Tarjeta de Crédito</span>
-        </div>
+            <button class="close_show_order"><i class="fas fa-times"></i></button>
 
-          <div class="order_time">
-              <label for="date">Fecha del Pedido:</label>
-              <input type="date" id="date">
-              <label for="time">Hora del Pedido:</label>
-              <input type="time" id="time">
-          </div>
-          <div class="status_list">
-            <label for="status_pedido">Estatus del Pedido</label>
-            <select id="status_pedido" class="status_select">
-                <option value="confirmacion">Confirmación</option>
-                <option value="en_proceso">En Proceso</option>
-                <option value="listo">Listo</option>
-                <option value="entregado">Entregado</option>
-            </select>
-        </div>
-        
-        </section>
+            <div class="order_header">
+                <h2>Datos del pago</h2>
+            </div>
+            <div class="data_reference">
+                <div class="name_field">
+                    <label for="name">Referencia:</label>
+                    <input type="text" id="name" value="John" readonly>
+                </div>
+                <div class="surname_field">
+                    <label for="surname">Número de celular donde se realizo el pago:</label>
+                    <input type="text" id="surname" value="Doe" readonly>
+                </div>
+            </div>
+
+            <div class="data_capture">
+                <div class="name_field">
+                    <label for="name">Captura:</label>
+                    <img src="" alt="">
+                </div>
+            </div>
+
+          </section>
       
-      
-
         <footer class="footer">
         
             <div class="footer-box">
