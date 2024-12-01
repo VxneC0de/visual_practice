@@ -173,7 +173,7 @@ td a i{
 
 /*==================== PAGINATION TABLE ====================*/
 
-.pagination{
+/*.pagination{
     display: flex;
     justify-content: flex-end;
     width: 100%;
@@ -196,7 +196,7 @@ td a i{
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
     margin: 0 5px;
     cursor: pointer;
-}
+}/*
 
 
 /*==================== RESPONSIVE TABLE ====================*/

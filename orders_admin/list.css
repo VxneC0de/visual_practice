@@ -16,7 +16,7 @@
 }
 
 .order_header {
-    position: relative; /* Para que el botón de cerrar se posicione en relación al encabezado */
+    position: relative;
 }
 
 .order_header h2 {
@@ -137,37 +137,72 @@
     background-color: #242526;
 }
 
-.payment_method {
+.user_payment {
     display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
-.payment_method label{
+.user_payment div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user_payment label {
     font-weight: bold;
+    margin-right: 10px;
+}
+
+.user_payment input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.user_payment span {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.icon_clickable i {
+    font-size: 24px;
+    cursor: pointer;
+}
+  
+.icon_clickable i:hover {
+    color: #347928;
 }
 
 .total_amount{
-    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .total_amount label{
     font-weight: bold;
 }
 
-.order_time {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.order_time label{
-    font-weight: bold;
-}
-
 .status_list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .status_list label {
@@ -176,15 +211,17 @@
 
 .status_select {
     background-color: #185519;
+    width: 70%;
     color: #ffffff;
     font-weight: 500;
     border-radius: 6px;
     padding: 3px;
     border: none;
-    -webkit-appearance: none;  /* Para Safari */
-    -moz-appearance: none;     /* Para Firefox */
-    appearance: none;          /* Para otros navegadores */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     cursor: pointer;
+    text-align: center;
 }
 
 .status_select option {
@@ -192,6 +229,43 @@
     color: #000000;
 }
 
+.box_submit{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box_submit .submit{
+    height: 40px;
+    width: 80%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #707070;
+}
+
+.box_submit .submit:hover {
+    background: #347928;
+}
+
+::-webkit-scrollbar{
+    height: 5px;
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+}
 
 @media screen and (max-width: 970px) {
     .show_order {
@@ -203,17 +277,25 @@
         font-size: 1.2rem;
     }
 
-    .payment_method, .total_amount, .order_time, .status_list {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .user_info input, .payment_method span, .total_amount span, .order_time input, .status_list span {
+    .user_info input, .user_payment input, .total_amount span, .status_list span {
         width: 100%;
         margin-top: 5px;
     }
 
-    .table_section_list table {
-        min-width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    .total_amount, .user_info div, .user_payment div, .user_payment span, .status_list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
     }
+
+    .user_info input, .user_payment input, .total_amount span, .status_list span {
+        width: 100%;
+        margin-top: 5px;
+        text-align: center;
+    }
+
 }
